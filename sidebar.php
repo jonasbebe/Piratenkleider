@@ -39,9 +39,10 @@
                         $alturls = preg_split("/[\n\r]+/", $options['plakate-altadressen']);
                         if (is_array( $alturls )) {
                             foreach ( $alturls  as $current) {
-                                list($thisurl,$thistitel,$thisweb) = explode("|", $current);
-                                $thisurl = esc_url( $thisurl );
-                                $thisweb = esc_url ($thisweb);
+                                $parts = explode("|", $current, 3);
+                                $thisurl = esc_url( $parts[0] ?? '' );
+                                $thistitel = wp_filter_nohtml_kses($parts[1] ?? '');
+                                $thisweb = esc_url ($parts[2] ?? '');
                                 
                                 if ($thisurl <> '') {                                
                                     echo '<li class="slide">';      

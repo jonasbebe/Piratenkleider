@@ -124,7 +124,10 @@ class Newsletter_Widget extends WP_Widget {
 	}
 	
 	public function widget( $args, $instance ) {                
-		extract( $args );
+		$before_widget = $args['before_widget'] ?? '';
+		$after_widget = $args['after_widget'] ?? '';
+		$before_title = $args['before_title'] ?? '';
+		$after_title = $args['after_title'] ?? '';
 		$title = apply_filters( 'widget_title', $instance['title'] );
 		$url = esc_url($instance['url']);
 				
@@ -192,7 +195,7 @@ class Newsletter_Widget extends WP_Widget {
 
 } // class Newsletter_Widget
 // register widget
-add_action( 'widgets_init', create_function( '', 'register_widget( "Newsletter_Widget" );' ) );
+add_action( 'widgets_init', function() { register_widget( "Newsletter_Widget" ); } );
 
 
 /**
@@ -213,7 +216,10 @@ class ParteiLinkliste_Widget extends WP_Widget {
 	
 	public function widget( $args, $instance ) {     
 	    global $defaultoptions;
-            extract( $args );
+	    $before_widget = $args['before_widget'] ?? '';
+	    $after_widget = $args['after_widget'] ?? '';
+	    $before_title = $args['before_title'] ?? '';
+	    $after_title = $args['after_title'] ?? '';
             $bereich =  $instance['bereich'] ;
             if ((!isset($bereich)) || (empty($bereich))) {
                 $bereich = $defaultoptions['default_footerlink_key'];
@@ -283,7 +289,7 @@ class ParteiLinkliste_Widget extends WP_Widget {
 } // class Partei Linkliste Widget
 //
 // register widget
-add_action( 'widgets_init', create_function( '', 'register_widget( "ParteiLinkliste_Widget" );' ) );
+add_action( 'widgets_init', function() { register_widget( "ParteiLinkliste_Widget" ); } );
 
 
 /**
@@ -354,7 +360,10 @@ class Bannerlink_Widget extends WP_Widget {
 	public function widget($args, $instance) {
 	    global $defaultoptions;
 	    
-	    extract($args);
+	    $before_widget = $args['before_widget'] ?? '';
+	    $after_widget = $args['after_widget'] ?? '';
+	    $before_title = $args['before_title'] ?? '';
+	    $after_title = $args['after_title'] ?? '';
 	    $title = apply_filters('widget_title', $instance['title']);
 	    $url = esc_url($instance['url']);
 	    $image_url = esc_url($instance['image_url']);
@@ -401,5 +410,5 @@ class Bannerlink_Widget extends WP_Widget {
 }	
 //
 // register widget
-add_action( 'widgets_init', create_function( '', 'register_widget( "Bannerlink_Widget" );' ) );
+add_action( 'widgets_init', function() { register_widget( "Bannerlink_Widget" ); } );
 

@@ -244,10 +244,10 @@ function linktipp_display ($linktipp, $addclass = '') {
 
 	   if ($options['linktipps-titlepos']==1) { 
 	      $out .= '<header class="post-title p3-cbox">';
-	      if (str_len(trim($linktipp_untertitel))>1) {
+	      if (mb_strlen(trim($linktipp_untertitel))>1) {
 		  $out .= '<div class="hgroup">';
 	      }
-	      if (($options['linktipps-subtitlepos']==0) && (str_len(trim($linktipp_untertitel))>1)) {
+	      if (($options['linktipps-subtitlepos']==0) && (mb_strlen(trim($linktipp_untertitel))>1)) {
 		  $out .= '<h3 class="subtitle">'.$linktipp_untertitel.'</h3>';
 	      }
 	      $out .= '<h2>';   
@@ -257,10 +257,10 @@ function linktipp_display ($linktipp, $addclass = '') {
 	      $out .=  $title;
 	      if (($options['linktipps-linkpos']==0) || ($options['linktipps-linkpos']==3)) {  $out .= '</a>'; }
 	      $out .= '</h2>';
-	      if (($options['linktipps-subtitlepos']==1) && (str_len(trim($linktipp_untertitel))>1)) {
+	      if (($options['linktipps-subtitlepos']==1) && (mb_strlen(trim($linktipp_untertitel))>1)) {
 		  $out .= '<h3 class="subtitle">'.$linktipp_untertitel.'</h3>';
 	      }
-	      if (str_len(trim($linktipp_untertitel))>1) {
+	      if (mb_strlen(trim($linktipp_untertitel))>1) {
 		  $out .= '</div>';
 	      }
 	      $out .= '</header>'; 
@@ -278,12 +278,12 @@ function linktipp_display ($linktipp, $addclass = '') {
 }
 
 function linktipps_shortcode( $atts ) {
-	extract( shortcode_atts( array(
+	$atts = shortcode_atts( array(
 		'cat' => '',
 		'num' => 5,
-	), $atts ) );
-	$num = sanitize_text_field($num);
-	$cat = sanitize_text_field($cat);
+	), $atts );
+	$num = sanitize_text_field($atts['num']);
+	$cat = sanitize_text_field($atts['cat']);
 	if ((isset($cat)) && ( strlen(trim($cat))>0)) {
 	    $args = array(
 			'post_type' => 'linktipps',

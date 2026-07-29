@@ -705,7 +705,7 @@ function piratenkleider_display_person ($post_id = 0, $format = 'full', $profill
 function piratenkleider_person_shortcode( $atts ) {
     global $options;
 
-	extract( shortcode_atts( array(
+	$atts = shortcode_atts( array(
 		'cat' => '',
 	        'name' => '',
 		'num' => 30,
@@ -715,13 +715,13 @@ function piratenkleider_person_shortcode( $atts ) {
 		'showautor' => 1,
                 'listorder' => '',
 		'offset'	=> 0,
-	), $atts ) );
+	), $atts );
 	$single = 0;
-	$cat = sanitize_text_field($cat);
-        $listorder= sanitize_text_field($listorder);
-	$name = sanitize_text_field($name);
-	$order =   strtolower(sanitize_text_field($order));
-	$offset = intval($offset);
+	$cat = sanitize_text_field($atts['cat']);
+        $listorder= sanitize_text_field($atts['listorder']);
+	$name = sanitize_text_field($atts['name']);
+	$order =   strtolower(sanitize_text_field($atts['order']));
+	$offset = intval($atts['offset']);
 
 	
 	if ($order != 'desc') {
@@ -729,12 +729,12 @@ function piratenkleider_person_shortcode( $atts ) {
 	} else {
 	    $order='DESC';  
 	}
-	$format = sanitize_text_field($format);
-	$showautor = sanitize_text_field($showautor);
-	if ((isset($id)) && ( strlen(trim($id))>0)) {
+	$format = sanitize_text_field($atts['format']);
+	$showautor = sanitize_text_field($atts['showautor']);
+	if ((isset($atts['id'])) && ( strlen(trim($atts['id']))>0)) {
 	    $args = array(
 			'post_type' => 'person',
-			'p' => $id
+			'p' => $atts['id']
 		);
 	    $single = 1;
 	} elseif ((isset($name)) && ( strlen(trim($name))>0)) {    

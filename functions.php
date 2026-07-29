@@ -5,7 +5,7 @@
  * @source http://github.com/xwolfde/Piratenkleider
  * @creator xwolf
  * @version 3.3
- * @licence GPL 2.0 
+ * @licence GPL 2.0
  */
 
 // Make theme available for translation
@@ -24,19 +24,19 @@ $options = piratenkleider_initoptions();
 if(isset($_SERVER['HTTP_X_FORWARDED_FOR'])) {
   $xffaddrs = explode(',',$_SERVER['HTTP_X_FORWARDED_FOR']);
   $_SERVER['REMOTE_ADDR'] = $xffaddrs[0];
-}    
+}
 $_SERVER['REMOTE_ADDR'] = getAnonymIp($_SERVER['REMOTE_ADDR']);
 
 if ($options['anonymize-user']==1) {
     /* IP-Adresse ueberschreiben */
     $_SERVER["REMOTE_ADDR"] = "0.0.0.0";
     /* UA-String ueberschreiben */
-    $_SERVER["HTTP_USER_AGENT"] = "Browser anonymized";    
+    $_SERVER["HTTP_USER_AGENT"] = "Browser anonymized";
     update_option('require_name_email',0);
 }
 
-require_once( get_template_directory() . '/inc/forms.php' );     
-require_once( get_template_directory() . '/inc/theme-options.php' );     
+require_once( get_template_directory() . '/inc/forms.php' );
+require_once( get_template_directory() . '/inc/theme-options.php' );
 require_once( get_template_directory() . '/inc/custom-posts.php' );
 require_once( get_template_directory() . '/inc/business-cards.php' );
 require_once( get_template_directory() . '/inc/custom-fields.php' );
@@ -52,7 +52,7 @@ function piratenkleider_setup() {
 
 
 	if ( ! isset( $content_width ) )   $content_width = $defaultoptions['content-width'];
-     
+
         // This theme styles the visual editor with editor-style.css to match the theme style.
         add_editor_style();
         // This theme uses post thumbnails
@@ -63,9 +63,9 @@ function piratenkleider_setup() {
         add_theme_support( 'title-tag' );
         /* New Title handling since WP 4.1 */
         add_theme_support( 'html5' );
-        /* New Title handling since WP 4.1 */   
-        
-        
+        /* New Title handling since WP 4.1 */
+
+
         add_action( 'init', 'enable_category_taxonomy_for_pages', 500 );
 
         function enable_category_taxonomy_for_pages() {
@@ -78,16 +78,16 @@ function piratenkleider_setup() {
             'height'        => 0,
             'default-image' => $defaultoptions['logo'],
             'uploads'       => true,
-            'random-default' => false,                      
+            'random-default' => false,
             'flex-height' => true,
             'flex-width' => true,
 	    'header-text'   => false,
             'suggested-height' => $defaultoptions['logo-height'],
             'suggested-width' => $defaultoptions['logo-width'],
-            'max-width' => 350,           
+            'max-width' => 350,
         );
        add_theme_support( 'custom-header', $args );
-               
+
        $args = array(
 	    'default-color'	    => $defaultoptions['background-header-color'],
 	    'default-image'	    => $defaultoptions['background-header-image'],
@@ -185,9 +185,9 @@ function piratenkleider_setup() {
 
 
        if ($options['login_errors']==0) {
-	    /** Abschalten von Fehlermeldungen auf der Loginseite */      
-           add_filter('login_errors', create_function('$a', "return null;"));
-       }        
+       /** Abschalten von Fehlermeldungen auf der Loginseite */      
+          add_filter('login_errors', function($a) { return null; });
+       }
         /** Entfernen der Wordpressversionsnr im Header */
         remove_action('wp_head', 'wp_generator');
 	

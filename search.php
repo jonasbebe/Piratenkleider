@@ -46,7 +46,7 @@ Template Name: Search Page
 	    <h1 class="post-title"><span><?php printf( __( 'Search entries for "%s"', 'piratenkleider' ), '' .get_search_query() . '' ); ?></span></h1>
 	<?php }  
 	
-        $query_args = explode("&", $query_string);
+        $query_args = explode("&", $query_string, 2);
         $search_query = array(
                    'post_status' => 'publish',
                    'posts_per_page' => $options['suche-treffer_pro_seite'],
@@ -55,7 +55,7 @@ Template Name: Search Page
         );
 
         foreach($query_args as $key => $string) {
-            $query_split = explode("=", $string);
+            $query_split = explode("=", $string, 2);
             if (count($query_split) > 1) {
                 $search_query[$query_split[0]] = urldecode($query_split[1]);
             }
