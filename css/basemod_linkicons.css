@@ -1,4 +1,4 @@
-/* 
+/*
  * Document   : basemod_linkicons
  * Description:
  * Automatische Linkicons über CSS
@@ -81,7 +81,7 @@
 
 .content-primary a[href $=".epub"]:after, .content-primary a[href $=".EPUB"]:after {
 	content: " (ePUB-Datei) ";
-}    
+}
 
 .content-primary a[href $=".doc"]:before, .content-primary a[href $=".DOC"]:before,
 .content-primary a[href $=".docx"]:before, .content-primary a[href $=".DOCX"]:before {
@@ -126,7 +126,7 @@
 .content-primary a[href $=".tar"]:before, .content-primary a[href $=".TAR"]:before {
 	background-position: -442px 0;
 	width: 18px;
-}  
+}
 
 .content-primary a.extern:before {
 	background-position: -224px 3px;
@@ -150,8 +150,8 @@
 	width: 18px;
 }
 
-.content-primary a[href *= "wiki.piraten-thueringen.de"]:before, 
-.content-primary a[href *= "wiki.piratenbrandenburg.de"]:before, 
+.content-primary a[href *= "wiki.piraten-thueringen.de"]:before,
+.content-primary a[href *= "wiki.piratenbrandenburg.de"]:before,
 .content-primary a[href *= "wiki.piratenpartei.de"]:before {
 	background-position: -62px 0;
 	width: 16px;
@@ -181,27 +181,27 @@
 .content-primary a[href *= "de.wikipedia.org"]:before {
 	background-position: -302px 0;
 	width: 18px;
-}     
+}
 
 .content-primary a[href *= "facebook.com"]:before {
 	background: url('../images/socialmedia.png') no-repeat -40px -72px;
 	width: 18px;
-}     
+}
 
 .content-primary a[href *= "plus.google.com"]:before {
 	background: url('../images/socialmedia.png') no-repeat -40px -200px;
 	width: 18px;
-}  
+}
 
 .content-primary a[href *= "twitter.com"]:before {
 	background: url('../images/socialmedia.png') no-repeat -40px -328px;
 	width: 18px;
-} 
+}
 
 .content-primary a[href *= "flickr.com"]:before {
 	background: url('../images/socialmedia.png') no-repeat -40px -168px;
 	width: 18px;
-}   
+}
 
 .content-primary a[href *= "youtube.com"]:before,
 .content-primary a[href *= "youtube-nocookie.com"]:before {
@@ -210,11 +210,11 @@
 }
 
 .content-primary a[href $="rss2"]:before,
-.content-primary a[href $="rss"]:before, 
+.content-primary a[href $="rss"]:before,
 .content-primary a[href *= "/feed/"]:before {
 	background: url('../images/socialmedia.png') no-repeat -40px -102px;
 	width: 18px;
-}  
+}
 
 .content-primary header a:before,
 .content-primary h1 a:before,

@@ -34,7 +34,7 @@
 		content: "";
 	}
 
-	.teaser,	
+	.teaser,
 	.breadcrumbs,
 	.newsletter,
 	.nav-top,
@@ -44,7 +44,7 @@
 	.symbolbild,
 	.startpage-widget-area,
 	.switchon, .switchoff,
-	.content-primary .post-nav, 	
+	.content-primary .post-nav,
 	#socialmedia_iconbar,
 	#respond {
 		display: none;

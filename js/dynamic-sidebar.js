@@ -2,27 +2,27 @@
  *  Dynamische Sidebar fuer Piratenkleider
 */
 jQuery(document).ready(function($) {
-  
+
     var $cssPrimaryOnHideSidebar = {
-	'width' : '100%' 
+	'width' : '100%'
     };
     var $cssASideOnHideSidebar = {
-	'width' : '0'   
+	'width' : '0'
     };
     var $cssPrimaryOnViewSidebar = {
-	'width' : '67%' 
+	'width' : '67%'
     };
     var $cssASideOnViewSidebar = {
-	'width' : '33%' 
+	'width' : '33%'
     };
-    $.SetOnSwitch = function() {   
-	 $(".content-primary").prepend($htmlOnSwitch);     
+    $.SetOnSwitch = function() {
+	 $(".content-primary").prepend($htmlOnSwitch);
     };
-    $.SetOffSwitch = function() {      
+    $.SetOffSwitch = function() {
 	 $(".content-primary").prepend($htmlOffSwitch);
     };
     $.OnClickOnSwitchOff = function() {
-	$(".switchoff a").click(function(event) {    
+	$(".switchoff a").click(function(event) {
 	    $(".switchon").toggle();
 	    $(".switchoff").toggle();
 	    $(".content-aside .skin").toggle();
@@ -37,13 +37,13 @@ jQuery(document).ready(function($) {
 	    $(".switchoff").toggle();
 	    $(".content-aside .skin").toggle();
 	    $(".content-primary").css($cssPrimaryOnViewSidebar);
-	    $(".content-aside").css($cssASideOnViewSidebar);      
+	    $(".content-aside").css($cssASideOnViewSidebar);
 	    event.preventDefault();
 	})
     };
 
 
-    
+
    var breite = $(window).width();
    if (breite > 600) {
     $.SetOnSwitch();

@@ -1,7 +1,7 @@
 <?php
 /*
  * Piratenkleider Widgets
- * Proudly made with a lot of coffee 
+ * Proudly made with a lot of coffee
  */
 
 
@@ -28,7 +28,7 @@ function piratenkleider_widgets_init() {
             'after_title' => '</h2>',
     ) );
 
-   
+
 
     // Widgets for indexpages (categories, tags, authorpage)
     register_sidebar( array(
@@ -122,77 +122,80 @@ class Newsletter_Widget extends WP_Widget {
 			array( 'description' => __( 'Displays a form to subscribe to a mailing list.', 'piratenkleider' ), ) // Args
 		);
 	}
-	
-	public function widget( $args, $instance ) {                
-		extract( $args );
+
+	public function widget( $args, $instance ) {
+		$before_widget = $args['before_widget'] ?? '';
+		$after_widget = $args['after_widget'] ?? '';
+		$before_title = $args['before_title'] ?? '';
+		$after_title = $args['after_title'] ?? '';
 		$title = apply_filters( 'widget_title', $instance['title'] );
 		$url = esc_url($instance['url']);
-				
-		echo $before_widget;				                    
+
+		echo $before_widget;
                 echo '<div class="newsletter">';
-                echo $before_title . $title . $after_title;  ?> 
-                 
-                <form method="post" action="<?php echo $url; ?>">						
+                echo $before_title . $title . $after_title;  ?>
+
+                <form method="post" action="<?php echo $url; ?>">
                     <label for="<?php echo $this->get_field_id( 'title' ); ?>">
                         <?php _e("Subscribe to newsletter", 'piratenkleider'); ?>
                     </label>
-                    <input type="text" id="<?php echo $this->get_field_id( 'title' ); ?>" 
-                           name="email" 
-                           value="<?php _e("Enter email address", 'piratenkleider'); ?>" 
+                    <input type="text" id="<?php echo $this->get_field_id( 'title' ); ?>"
+                           name="email"
+                           value="<?php _e("Enter email address", 'piratenkleider'); ?>"
                            placeholder="<?php _e("Enter email address", 'piratenkleider'); ?>"
-                           onfocus="if(this.value=='<?php _e("Enter email address", 'piratenkleider'); ?>')this.value='';" 
+                           onfocus="if(this.value=='<?php _e("Enter email address", 'piratenkleider'); ?>')this.value='';"
                            onblur="if(this.value=='')this.value='<?php _e("Enter email address", 'piratenkleider'); ?>';">
-                    <input type="submit" name="email-button" 
+                    <input type="submit" name="email-button"
                            value="<?php _e("Subscribe", 'piratenkleider'); ?>" id="newslettersubmit">
-            <?php 	    
+            <?php
                 $site_link = home_url();
-                if ((isset($url))&& (strpos($url, $site_link) !== false)) {  
+                if ((isset($url))&& (strpos($url, $site_link) !== false)) {
                     echo "<p>";
                     _e("Notice: You will leave this website for further steps.", 'piratenkleider');
                     echo "</p>";
-                } ?>		    
-                </form>           
+                } ?>
+                </form>
             </div>
-             <?php 
-               echo $after_widget;    
+             <?php
+               echo $after_widget;
 	}
-	
+
 	public function update( $new_instance, $old_instance ) {
 		$instance = array();
 		$instance['title'] = strip_tags( $new_instance['title'] );
-		$instance['url'] = esc_url($new_instance['newsletter_url']);	    
+		$instance['url'] = esc_url($new_instance['newsletter_url']);
 		return $instance;
 	}
-	
+
 	public function form( $instance ) {
 	    global $defaultoptions;
-	   	    
+
 	    $defaults = array(
 		'title'		    => __( 'Newsletter / Mailing list', 'piratenkleider' ),
 		'newsletter_url'    => $defaultoptions['url-newsletteranmeldung'],
 	    );
 	    $instance = wp_parse_args((array)$instance, $defaults);
 	    $title = $instance['title'];
-	    $url = $instance['newsletter_url'];	    
-	    ?> 
+	    $url = $instance['newsletter_url'];
+	    ?>
              <p>
                 <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:', 'piratenkleider' ); ?>
                 <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
-                </label> 
+                </label>
             </p>
 
              <p>
                 <label for="<?php echo $this->get_field_id( 'newsletter_url' ); ?>"><?php _e( 'URL for subscribing form (with email attribute)', 'piratenkleider' ); ?>
                 <input class="widefat" id="<?php echo $this->get_field_id( 'newsletter_url' ); ?>" name="<?php echo $this->get_field_name( 'newsletter_url' ); ?>" type="text" value="<?php echo esc_attr( $url ); ?>" />
-                </label> 
+                </label>
             </p>
              <?php
-                
+
 	}
 
 } // class Newsletter_Widget
 // register widget
-add_action( 'widgets_init', create_function( '', 'register_widget( "Newsletter_Widget" );' ) );
+add_action( 'widgets_init', function() { register_widget( "Newsletter_Widget" ); } );
 
 
 /**
@@ -210,16 +213,19 @@ class ParteiLinkliste_Widget extends WP_Widget {
 		);
 	}
 
-	
-	public function widget( $args, $instance ) {     
+
+	public function widget( $args, $instance ) {
 	    global $defaultoptions;
-            extract( $args );
+	    $before_widget = $args['before_widget'] ?? '';
+	    $after_widget = $args['after_widget'] ?? '';
+	    $before_title = $args['before_title'] ?? '';
+	    $after_title = $args['after_title'] ?? '';
             $bereich =  $instance['bereich'] ;
             if ((!isset($bereich)) || (empty($bereich))) {
                 $bereich = $defaultoptions['default_footerlink_key'];
             }
             echo $before_widget;
-            global $default_footerlink_liste; 
+            global $default_footerlink_liste;
 
             $title =   $default_footerlink_liste[$bereich]['title'];
             $url =   $default_footerlink_liste[$bereich]['url'];
@@ -232,64 +238,64 @@ class ParteiLinkliste_Widget extends WP_Widget {
               echo '<ul>';
 
               foreach($default_footerlink_liste[$bereich]['sublist'] as $i => $value) {
-                   echo '<li><a href="'.$value.'">';                                                                                                        
+                   echo '<li><a href="'.$value.'">';
                    echo $i.'</a></li>';
                    echo "\n";
-             }            
-             echo '</ul>';     
+             }
+             echo '</ul>';
 
-           echo $after_widget;            
+           echo $after_widget;
 	}
 
-	
+
 	public function update( $new_instance, $old_instance ) {
 		$instance = array();
                 $instance['bereich'] = strip_tags( $new_instance['bereich'] );
 		return $instance;
 	}
 
-	
+
 	public function form( $instance ) {
 		global $defaultoptions;
                 if ( isset( $instance[ 'bereich' ] ) ) {
 			$bereich = $instance[ 'bereich' ];
 		} else {
 			$bereich = $defaultoptions['default_footerlink_key'];
-		}                 
- 
+		}
+
                 global $default_footerlink_liste;
                 echo "<label for=\"".$this->get_field_id( 'bereich' )."\">".__( 'Section:', 'piratenkleider' )."</label>\n";
                 echo "<select name=\"".$this->get_field_name( 'bereich' )."\" id=\"".$this->get_field_id( 'bereich' )."\">\n";
 
-                foreach($default_footerlink_liste as $i => $value) {   
+                foreach($default_footerlink_liste as $i => $value) {
                     echo "\t\t\t\t";
                     echo '<option value="'.$i.'"';
                     if ( $i == $bereich ) {
                         echo ' selected="selected"';
-                    }                                                                                                                                                                
+                    }
                     echo '>';
                     if (!is_array($value)) {
                         echo $value;
                     } else {
                         echo $i;
-                    }     
-                    echo '</option>';                                                                                                                                                              
-                    echo "\n";                                            
-                }  
-                echo "</select><br>\n";                                   
+                    }
+                    echo '</option>';
+                    echo "\n";
+                }
+                echo "</select><br>\n";
                 echo "\t\t\t";
 	}
 
 } // class Partei Linkliste Widget
 //
 // register widget
-add_action( 'widgets_init', create_function( '', 'register_widget( "ParteiLinkliste_Widget" );' ) );
+add_action( 'widgets_init', function() { register_widget( "ParteiLinkliste_Widget" ); } );
 
 
 /**
  * Adds Bannerlink_Widget widget.
  */
-class Bannerlink_Widget extends WP_Widget {	
+class Bannerlink_Widget extends WP_Widget {
 	public function __construct() {
 		parent::__construct(
 	 		'Bannerlink_Widget', // Base ID
@@ -312,24 +318,24 @@ class Bannerlink_Widget extends WP_Widget {
 	    ?>
             <p>
                 <label for="<?php echo $this->get_field_id('title'); ?>"><?php echo 'Title:'; ?></label>
-                <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" 
-                       name="<?php echo $this->get_field_name('title'); ?>" 
+                <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>"
+                       name="<?php echo $this->get_field_name('title'); ?>"
                        type="text" value="<?php echo esc_attr($title); ?>" />
 
             </p>
             <p>
                 <label for="<?php echo $this->get_field_id('url'); ?>"><?php echo 'Target-URL:'; ?></label>
-                <input class="widefat" id="<?php echo $this->get_field_id('url'); ?>" 
-                       name="<?php echo $this->get_field_name('url'); ?>" 
-                       type="text" value="<?php echo esc_attr($url); ?>" /> 
+                <input class="widefat" id="<?php echo $this->get_field_id('url'); ?>"
+                       name="<?php echo $this->get_field_name('url'); ?>"
+                       type="text" value="<?php echo esc_attr($url); ?>" />
             </p>
              <p>
                 <label for="<?php echo $this->get_field_id('image_url'); ?>"><?php _e('Image:','piratenkleider'); ?>
-                        <input 	class="image_url widefat" id="<?php echo $this->get_field_id('image_url'); ?>" 
-                       name="<?php echo $this->get_field_name('image_url'); ?>" 
+                        <input 	class="image_url widefat" id="<?php echo $this->get_field_id('image_url'); ?>"
+                       name="<?php echo $this->get_field_name('image_url'); ?>"
                        type="text" value="<?php echo esc_attr($image_url); ?>" />
 
-                        <input type="hidden" id="<?php echo $this->get_field_id('image_id'); ?>" 
+                        <input type="hidden" id="<?php echo $this->get_field_id('image_id'); ?>"
                           class="image_id"  name="<?php echo $this->get_field_name('image_id'); ?>" />
 
                         <input class="button upload_image_button" name="upload_image_button" id="<?php echo $this->get_field_id('image_url'); ?>_button"  value="<?php _e('Upload', 'piratenkleider'); ?>" />
@@ -337,24 +343,27 @@ class Bannerlink_Widget extends WP_Widget {
 
                     <br /><?php _e('Select image from media library or enter an URL.', 'piratenkleider'); ?>
 
-                </label> 
+                </label>
             </p>
-            <?php 
+            <?php
 	}
-	
+
 	public function update($new_instance, $old_instance) {
 	    $instance = array();
 	    $instance['title'] = strip_tags($new_instance['title']);
-	    $instance['url'] = esc_url($new_instance['url']);	    
+	    $instance['url'] = esc_url($new_instance['url']);
 	    $instance['image_url'] = esc_url($new_instance['image_url']);
 	    $instance['image_id'] = intval($new_instance['image_id']);
 	    return $instance;
 	}
-	
+
 	public function widget($args, $instance) {
 	    global $defaultoptions;
-	    
-	    extract($args);
+
+	    $before_widget = $args['before_widget'] ?? '';
+	    $after_widget = $args['after_widget'] ?? '';
+	    $before_title = $args['before_title'] ?? '';
+	    $after_title = $args['after_title'] ?? '';
 	    $title = apply_filters('widget_title', $instance['title']);
 	    $url = esc_url($instance['url']);
 	    $image_url = esc_url($instance['image_url']);
@@ -362,24 +371,24 @@ class Bannerlink_Widget extends WP_Widget {
 	    $image_width = $defaultoptions['bannerlink-width'];
 	    $image_height =0;
 	    if ($image_id >0) {
-		// Get Thumbnail instead of original 
-		$image_attributes = wp_get_attachment_image_src( $image_id, $defaultoptions['bannerlink_name'] ); 
+		// Get Thumbnail instead of original
+		$image_attributes = wp_get_attachment_image_src( $image_id, $defaultoptions['bannerlink_name'] );
 		$image_url = $image_attributes[0];
 		$image_width = $image_attributes[1];
 		$image_height = $image_attributes[2];
 	    }
             $site_link = home_url();
-            if ((isset($url))&& (strpos($url, $site_link) !== false)) {  
+            if ((isset($url))&& (strpos($url, $site_link) !== false)) {
                 $url = wp_make_link_relative($url);
             }
-            if (($image_id >0) || ((isset($image_url))&& (strpos($image_url, $site_link) !== false))) {  
+            if (($image_id >0) || ((isset($image_url))&& (strpos($image_url, $site_link) !== false))) {
                 $image_url = wp_make_link_relative($image_url);
-            }                       
-                                  
+            }
+
 	    if (!isset($url) && !isset($image_url)) {
 		return;
 	    }
-	    echo $before_widget;	    
+	    echo $before_widget;
 	    echo '<p class="bannerlink">';
             if ((isset($url)) && (strlen($url)>0))
                 echo '<a href="'.$url.'">';
@@ -397,9 +406,9 @@ class Bannerlink_Widget extends WP_Widget {
 	    echo "</p>\n";
 	    echo $after_widget;
 	}
-	
-}	
+
+}
 //
 // register widget
-add_action( 'widgets_init', create_function( '', 'register_widget( "Bannerlink_Widget" );' ) );
+add_action( 'widgets_init', function() { register_widget( "Bannerlink_Widget" ); } );
 

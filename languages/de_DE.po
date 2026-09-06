@@ -212,7 +212,7 @@ msgstr "Website Menu"
 
 # @ piratenkleider
 #: functions.php:183
-msgid "Tecnical navigation"
+msgid "Technical navigation"
 msgstr "Technische Navigation"
 
 # @ piratenkleider
@@ -286,7 +286,7 @@ msgstr "Typ: Seite"
 
 # @ piratenkleider
 #: functions.php:1190
-msgid "Publiced at"
+msgid "Published at"
 msgstr "Veröffentlicht am"
 
 # @ piratenkleider
@@ -548,7 +548,7 @@ msgstr "Visitenkarte entfernt."
 
 # @ piratenkleider
 #: inc/business-cards.php:413
-msgid "Business card publiced."
+msgid "Business card published."
 msgstr "Visitenkarte ist nun öffentlich."
 
 # @ piratenkleider
@@ -606,7 +606,7 @@ msgstr "Es stehen derzeit noch keine Visitenkarten von Personen zur Verfügung."
 
 # @ piratenkleider
 #: inc/business-cards.php:976
-msgid "Alternativly define manually a short text and an image:"
+msgid "Alternatively define manually a short text and an image:"
 msgstr "Alternativ kann ein Text und ein Bild manuell hinzugefügt werden:"
 
 # @ piratenkleider
@@ -2406,7 +2406,7 @@ msgstr ""
 
 # @ piratenkleider
 #: inc/constants.php:2063
-msgid "None (Deactive)"
+msgid "None (Disabled)"
 msgstr "Keine (eigene CSS-Datei ist deaktiv)"
 
 # @ piratenkleider
@@ -2944,7 +2944,7 @@ msgstr "Link"
 
 # @ piratenkleider
 #: inc/constants.php:2461
-msgid "Wether to set the target link."
+msgid "Whether to set the target link."
 msgstr "Verlinkung festlegen"
 
 # @ piratenkleider
@@ -3086,7 +3086,7 @@ msgstr "Twittername ohne @ für Twitter Cards"
 
 # @ piratenkleider
 #: inc/constants.php:2552
-msgid "Contact informations"
+msgid "Contact information"
 msgstr "Kontaktinformationen"
 
 # @ piratenkleider
@@ -3146,12 +3146,12 @@ msgstr "Faxnummer"
 
 # @ piratenkleider
 #: inc/constants.php:2594
-msgid "Copyright informations"
+msgid "Copyright information"
 msgstr "Copyright-Informationen"
 
 # @ piratenkleider
 #: inc/constants.php:2595
-msgid "Addition field for copyright informations."
+msgid "Addition field for copyright information."
 msgstr "Zusätzliches Eingabefeld für optionale Copyright-Informationen."
 
 # @ piratenkleider
@@ -3259,9 +3259,9 @@ msgstr "Bühnenbild"
 # @ piratenkleider
 #: inc/custom-fields.php:105
 msgid ""
-"If you dont want to use the thumbnail (which uses normal formats) you can "
+"If you don't want to use the thumbnail (which uses normal formats) you can "
 "add here a special slider image, with proper sizes (1024 x 348 pixel). If "
-"this sizes dont fit, image will be cropped (mostyl from the edges up and "
+"this sizes don't fit, image will be cropped (mostly from the edges up and "
 "down)."
 msgstr ""
 "Falls das Artikelbild nicht für das Bühnenbild (Slider auf der Startseite) "
@@ -3730,7 +3730,7 @@ msgstr ""
 
 # @ piratenkleider
 #: search.php:130
-msgid "Alternativly try the following links:"
+msgid "Alternatively try the following links:"
 msgstr "Alternativ versuchen Sie es mit einem der folgenden Links:"
 
 # @ piratenkleider

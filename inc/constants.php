@@ -1,10 +1,10 @@
 <?php
 /**
  * Piratenkleider Constants
- * 
- **/ 
+ *
+ **/
 
-$defaultoptions = array( 
+$defaultoptions = array(
     'js-version'                    => '3.4',
     'content-width'                 => 665,
     'yt-content-width'              => 665,
@@ -22,7 +22,7 @@ $defaultoptions = array(
     'highslider-width'              => 1024,
     'highslider-height'             => 348,
     'highslider-crop'               => 1,
-    
+
     'plakate-width'                 => 300,
     'plakate-height'                => 416,
     'plakate-title'		    => '',
@@ -40,29 +40,29 @@ $defaultoptions = array(
     'src-default-symbolbild-tag'    => get_template_directory_uri() .'/images/default-vorlage.jpg',
     'src-default-symbolbild-author' => get_template_directory_uri() .'/images/default-vorlage.jpg',
     'src-default-symbolbild-archive' => get_template_directory_uri() .'/images/default-vorlage.jpg',
-    'src-default-artikel-symbolbild' => get_template_directory_uri() .'/images/default-vorlage.jpg',  
-    'src-default-symbolbild-person' => get_template_directory_uri() .'/images/default-vorlage.jpg',  
-    'slider-defaultbildsrc'	    => get_template_directory_uri() .'/images/default-vorlage.jpg',  
-    'src-linkicons-css'		    => get_template_directory_uri() .'/css/basemod_linkicons.min.css',        
-    'src-hamburger-css'		    => get_template_directory_uri() .'/css/hamburger.min.css',     
-    'src-hamburger-js'		    => get_template_directory_uri() .'/js/hamburger.min.js',    
-    'src-adminjs'                   => get_template_directory_uri() .'/js/admin.min.js', 
-    'src-admincss'                   => get_template_directory_uri() .'/css/admin.min.css', 
-    'src-customlogincss'            => get_template_directory_uri() .'/css/custom-login.min.css', 
+    'src-default-artikel-symbolbild' => get_template_directory_uri() .'/images/default-vorlage.jpg',
+    'src-default-symbolbild-person' => get_template_directory_uri() .'/images/default-vorlage.jpg',
+    'slider-defaultbildsrc'	    => get_template_directory_uri() .'/images/default-vorlage.jpg',
+    'src-linkicons-css'		    => get_template_directory_uri() .'/css/basemod_linkicons.min.css',
+    'src-hamburger-css'		    => get_template_directory_uri() .'/css/hamburger.min.css',
+    'src-hamburger-js'		    => get_template_directory_uri() .'/js/hamburger.min.js',
+    'src-adminjs'                   => get_template_directory_uri() .'/js/admin.min.js',
+    'src-admincss'                   => get_template_directory_uri() .'/css/admin.min.css',
+    'src-customlogincss'            => get_template_directory_uri() .'/css/custom-login.min.css',
 
     'dir-default-plakate'	    => '/plakate',
     'login_errors'		    => 1,
-    'slider-aktiv'                  => 1,    
+    'slider-aktiv'                  => 1,
     'aktiv-defaultseitenbild'       => 0,
     'seitenbild-size'		    => 1,
     'seitenbild-url'		    => '',
     'aktiv-artikelbild'		    => 1,
-    'artikelbild-size'		    => 1,    
+    'artikelbild-size'		    => 1,
     'aktiv-commentsonpages'	    => 0,
     'aktiv-platzhalterbilder-indexseiten'   => 0,
     'indexseitenbild-size'	    => 1,
     'continuelink'		    => 0,
-    'aktiv-suche'                   => 1,   
+    'aktiv-suche'                   => 1,
     'slider-defaultwerbeplakate'    => 1,
     'slider-numberarticle'          => 3,
     'slider-animationType'          => 'fade',
@@ -87,10 +87,10 @@ $defaultoptions = array(
     'zeige_sidebarpagemenu'                 => 1,
     'zeige_commentbubble_null'              => 0,
     'zeigerechtsvorschriften'               => 1,
-    
+
 
     'artikelstream-type'		    => 0,
-    'artikelstream-exclusive-catliste'	    => array(), 
+    'artikelstream-exclusive-catliste'	    => array(),
     /* Ids of categories */
     'artikelstream-maxnum-main'             =>  5,
     'artikelstream-maxnum-second'	    =>  1,
@@ -105,50 +105,50 @@ $defaultoptions = array(
     'artikelstream-show-linktipps'	    => 1,
     'artikelstream-nextnum-main'	    => 5,
     'artikelstream-nextnum-second'	    => 5,
-    'artikelstream-nextnum-linktipps'	    => 5,    
+    'artikelstream-nextnum-linktipps'	    => 5,
     'artikelstream-numfullwidth-main'       => 1,
     'artikelstream-numfullwidth-second'     => 1,
     'artikelstream-show-widget'		    => 0,
-    'artikelstream-content-allow3column'    => 0, 
+    'artikelstream-content-allow3column'    => 0,
     'categoryindex-teaserlength'            => 170,
     'categoryindex-numlinklist'		    => 5,
-    
+
     'category-teaser'			    => 1,
     'category-num-article-fullwidth'	    => 10,
     'category-num-article-halfwidth'	    => 0,
-    
-    'category-teaser-maxlength'		    => 500,            
-    'category-teaser-titleup'		    => 1, /* Titles up */ 
-    'category-teaser-datebox'		    => 4, 
-	/* 0 = Datebox, 
+
+    'category-teaser-maxlength'		    => 500,
+    'category-teaser-titleup'		    => 1, /* Titles up */
+    'category-teaser-datebox'		    => 4,
+	/* 0 = Datebox,
 	 * 1 = Thumbnail (or: first picture, first video, fallback picture),
 	 * 2 = First picture (or: thumbnail, first video, fallback picture),
 	 * 3 = First video (or: thumbnail, first picture, fallback picture),
 	 * 4 = First video (or: first picture, thumbnail, fallback picture),
-	 * 5 = Nothing */ 
+	 * 5 = Nothing */
     'category-teaser-floating'		    => 0,
     'category-teaser-dateline'		    => 1,
         /* 1 = show Date on line up of the text if no datebox */
-    'category-teaser-maxlength-halfwidth'   => 200,        
-    'category-teaser-titleup-halfwidth'	    => 1, 
-        /* 1= Titles up */ 
-    'category-teaser-datebox-halfwidth'	    => 4, 
+    'category-teaser-maxlength-halfwidth'   => 200,
+    'category-teaser-titleup-halfwidth'	    => 1,
+        /* 1= Titles up */
+    'category-teaser-datebox-halfwidth'	    => 4,
     'category-teaser-floating-halfwidth'    => 1,
-    'category-teaser-dateline-halfwidth'    => 2, 
-        /* 1 = show Date on line up of the text if no datebox */    
+    'category-teaser-dateline-halfwidth'    => 2,
+        /* 1 = show Date on line up of the text if no datebox */
     'teaser-thumbnail_width'		    => 150,
     'teaser-thumbnail_height'		    => 150,
     'teaser-thumbnail_crop'		    => 1,
-    
+
     'linktipp-thumbnail_width'		    => 320,
     'linktipp-thumbnail_height'		    => 320,
     'linktipp-thumbnail_crop'		    => 0,
-    
+
     'person-thumbnail_width'		    => 200,
     'person-thumbnail_height'		    => 300,
     'person-thumbnail_crop'		    => 1,
 
-    
+
     'sidebar-thumbnail_width'		    => 270,
     'sidebar-thumbnail_height'		    => 360,
     'sidebar-thumbnail_crop'		    => 1,
@@ -156,33 +156,33 @@ $defaultoptions = array(
 
     'bannerlink-width'			    => 300,
     'bannerlink_name'			    => 'bannerlink-thumb',
-    
 
-    
+
+
     'src-teaser-thumbnail_default'	    => get_template_directory_uri() .'/images/default-teaserthumb.gif',
     'teaser-thumbnail_fallback'		    => 1,
-    
-    'teaser-type'			    => 'big',    
+
+    'teaser-type'			    => 'big',
     'teaser-title-maxlength'		    => 120,
     'teaser-subtitle'			    => __( 'Trending Topics', 'piratenkleider' ),
     'teaser-title-words'		    => 7,
 
     'teaser_maxlength'			    => 500,
     'teaser-showcredits'                    => 1,
-    'teaser-titleup'			    => 1, 
-        /* Titles up */ 
+    'teaser-titleup'			    => 1,
+        /* Titles up */
     'teaser-datebox'			    => 4,
     'teaser-floating'			    => 0,
-    'teaser-dateline'			    => 1, 
+    'teaser-dateline'			    => 1,
         /* 1 = show Date on line up of the text if no datebox */
-    'teaser-maxlength-halfwidth'	    => 200,        
-    'teaser-titleup-halfwidth'		    => 1, 
-        /* Titles up */ 
-    'teaser-datebox-halfwidth'		    => 4, 
+    'teaser-maxlength-halfwidth'	    => 200,
+    'teaser-titleup-halfwidth'		    => 1,
+        /* Titles up */
+    'teaser-datebox-halfwidth'		    => 4,
     'teaser-floating-halfwidth'		    => 1,
-    'teaser-dateline-halfwidth'		    => 1, 
-        /* 1 = show Date on line up of the text if no datebox */      
-     
+    'teaser-dateline-halfwidth'		    => 1,
+        /* 1 = show Date on line up of the text if no datebox */
+
     'url-newsletteranmeldung'		    => 'https://lists.piratenpartei.de/sympa/subscribe/newsletter',
     'anonymize-user'                => 0,
     'anonymize-user-commententries' => 0,
@@ -194,20 +194,20 @@ $defaultoptions = array(
     'use_wp_feed_defaults'          => 1,
     'dir_feed_cache'                => '',
     'teaserlink1-title'             => __( 'Get Informed', 'piratenkleider' ),
-    'teaserlink1-untertitel'        => __( 'about our topics and visions!', 'piratenkleider' ),            
-    'teaserlink1-url'               => 'https://www.piratenpartei.de/politik/', 
+    'teaserlink1-untertitel'        => __( 'about our topics and visions!', 'piratenkleider' ),
+    'teaserlink1-url'               => 'https://www.piratenpartei.de/politik/',
     'teaserlink1-symbol'            => 'idee',
-    
+
     'teaserlink2-title'             => __( 'Support us', 'piratenkleider' ),
-    'teaserlink2-untertitel'        => __( 'with your engagement!', 'piratenkleider' ),            
-    'teaserlink2-url'               => 'https://spenden.piratenpartei.de/', 
+    'teaserlink2-untertitel'        => __( 'with your engagement!', 'piratenkleider' ),
+    'teaserlink2-url'               => 'https://spenden.piratenpartei.de/',
     'teaserlink2-symbol'            => 'herz',
-    
+
     'teaserlink3-title'             => __( 'Become a Pirat!', 'piratenkleider' ),
-    'teaserlink3-untertitel'        => __( 'Subscribe to the pirate party', 'piratenkleider' ),            
-    'teaserlink3-url'               => 'https://www.piratenpartei.de/mitmachen/mitglied-werden/', 
+    'teaserlink3-untertitel'        => __( 'Subscribe to the pirate party', 'piratenkleider' ),
+    'teaserlink3-url'               => 'https://www.piratenpartei.de/mitmachen/mitglied-werden/',
     'teaserlink3-symbol'            => 'steuerrad',
-    
+
     'stickerlink1-content'          => '<span class="gedreht">Become<br><span class="cicolor">Pirat!</span></span>',
     'stickerlink1-url'              => 'https://www.piratenpartei.de/mitmachen/mitglied-werden/',
     'stickerlink2-content'          => '<span class="gedreht"><span class="cicolor">Support</span><br><span class="small">and help us</span> </span>',
@@ -215,29 +215,29 @@ $defaultoptions = array(
     'stickerlink3-content'          => '',
     'stickerlink3-url'              => '',
     'default_footerlink_key'		    => 'International (with flags)',
-    'default_footerlink_show'		    => 1,    
-    'default_text_title_home_backlink'	    => __('Back to start page','piratenkleider' ), 
+    'default_footerlink_show'		    => 1,
+    'default_text_title_home_backlink'	    => __('Back to start page','piratenkleider' ),
     'yt-alternativeembed'		    => 1,
         /* YouTube Videos ueber eigenen Embedcode gestalten und an youtbe-nocookie lenken */
     'yt-norel'				    => 1,
 	/* Keine weiteren Videos vorschlagen */
-    'excerpt_allowtags'			    => '<br>,<br />',        
+    'excerpt_allowtags'			    => '<br>,<br />',
     'zeige_breadcrump'			    => 1,
-    'breadcrumb_delimiter'		    => ' / ',    
+    'breadcrumb_delimiter'		    => ' / ',
     'breadcrumb_homelinktext'		    =>  __( 'Start page', 'piratenkleider' ),
     'breadcrumb_beforehtml'		    =>  '<span class="current">',
     'breadcrumb_afterhtml'		    =>  '</span>',
     'zeige_breadcrump_frontpages'           => 0,
-    
-    
 
-    
+
+
+
     'src-linktipp-thumbnail_default'	    => get_template_directory_uri() .'/images/default-teaserthumb.gif',
     'src-person_bild_default'		    => '',
     'linktipps-titlepos'		    => 0, // 0 = ueber Bild/Text, 1 = unter Bild/Text
     'linktipps-linkpos'			    => 0, // 0 = Link auf dem Titel, 1 = Link auf Text/Bild, 2 = URL unter Bild/Text anzeigen&verlinken
     'linktipps-subtitlepos'		    => 0, // 0 = oben, vor Titel, 1 = oben nach titel, 2 = unten
-    
+
     'stylefile-position'		    => 0,
     'aktiv-stylefile'			    => 0,
     'fonts-headers'                         => 'none',
@@ -253,7 +253,7 @@ $defaultoptions = array(
     'position_sidebarbottom'                => 0,
     'suche-treffer_pro_seite'               => 10,
     'suche-excerptlength'                   => 300,
-    
+
     'meta-maxlengthvalue'                   => 140,
     'url-wiki'				    => 'https://wiki.piratenpartei.de',
     'vcard-showfeed'                        => 1,
@@ -262,7 +262,7 @@ $defaultoptions = array(
     'vcard-maxnum-selectlist'		    => 7,
     'sidebar-steckbrief-maxwidth'	    => 270,
     'sidebar-steckbrief-maxheight'	    => 360,
-        
+
     'optionpage-tab-default'                => 'kopfteil',
     'open_graph-active'                   => true,
     'open_graph_excerptlength'              => 400,
@@ -270,7 +270,7 @@ $defaultoptions = array(
 
 
 /*
- * Social Media 
+ * Social Media
  */
 $default_socialmedia_liste = array(
     'delicious' => array(
@@ -308,7 +308,7 @@ $default_socialmedia_liste = array(
 	'content'  => 'https://secure.flickr.com/photos/piratenpartei/',
 	'active' => 0,
     ),
-  
+
     'identica' => array(
 	'name' => 'Identica',
 	'content'  => 'https://identi.ca/piratenpartei',
@@ -324,7 +324,7 @@ $default_socialmedia_liste = array(
 	'content'  => '',
 	'active' => 0,
     ),
-    
+
     'youtube' => array(
 	'name' => 'YouTube',
 	'content'  => 'https://www.youtube.com/user/piratenpartei',
@@ -365,13 +365,13 @@ $default_socialmedia_liste = array(
         'content'  => 'https://instagram.com/piratenpartei/',
         'active' => 0,
     ),
-); 
+);
 
 
-/* 
- * Default Links for Topmenu , can be overwritten bei widget  
+/*
+ * Default Links for Topmenu , can be overwritten bei widget
  */
-$default_toplink_liste = array(    
+$default_toplink_liste = array(
     'link1'  => array(
 	'name'	    => __('Wiki', 'piratenkleider' ),
 	'content'  => 'https://wiki.piratenpartei.de',
@@ -391,7 +391,7 @@ $default_toplink_liste = array(
 	'name'	    => __('Chair', 'piratenkleider' ),
 	'content'  => 'https://vorstand.piratenpartei.de',
 	'active'    => 0,
-    ),  
+    ),
     'link5'  => array(
 	'name'	    => __('Flaschenpost', 'piratenkleider' ),
 	'content'  => 'https://flaschenpost.piratenpartei.de',
@@ -406,12 +406,12 @@ $default_toplink_liste = array(
 	'name'	    => __('Shop', 'piratenkleider' ),
 	'content'  => 'https://shop.piratenpartei.de',
 	'active'    => 0,
-    ),  
+    ),
      'link8'  => array(
 	'name'	    => __('Pirateninfo', 'piratenkleider' ),
 	'content'  => 'http://www.pirateninfo.de',
 	'active'    => 1,
-    ),  
+    ),
 );
 
 
@@ -447,23 +447,23 @@ $default_colorstyles = array(
     'colors_ch.css' => __( 'Switzerland', 'piratenkleider' ),
 
  );
-          
+
 
 
 $default_fonts = array(
     'none'=> array(
         'title' => __( 'Use default font settings', 'piratenkleider' ),
         'family' => '',
-    ),      
+    ),
     'serifdefault' => array(
         'title' => __( 'Georgia, Times, Calibri, serif', 'piratenkleider' ),
         'family' => 'Georgia, Times, Calibri, serif',
-    ),       
+    ),
     'sansserifdefault' => array(
         'title' => __( 'Helvetica, Verdana, Arial, sans-serif', 'piratenkleider' ),
         'family' => 'Helvetica, Verdana, Arial, sans-serif',
         'comments'  =>  __( 'Use default sans serif font', 'piratenkleider' ),
-    ),  
+    ),
     'BebasNeue' => array(
         'title' => __( 'Bebas Neue', 'piratenkleider' ),
         'comments'  => '',
@@ -481,7 +481,7 @@ $default_fonts = array(
         'eot'   => '/fonts/aller_rg.eot',
         'woff2'   => '/fonts/aller_rg.woff2',
     ),
-    
+
     'Awesome' => array(
         'title' => __( 'Awesome', 'piratenkleider' ),
         'comments'  => '',
@@ -495,25 +495,25 @@ $default_fonts = array(
         'webfont'   => 1,
         'eot'   => '/fonts/DroidSans.eot',
         'ttf'   => '/fonts/DroidSans.ttf',
-    ),    
+    ),
     'LinLibertine' => array(
         'title' => __( 'Libertine', 'piratenkleider' ),
-        'comments'  => '',        
+        'comments'  => '',
         'webfont'   => 1,
         'woff'   => '/fonts/LinLibertine_R.woff',
-    ), 
+    ),
     'PoliticsHead' => array(
         'title' => __( 'PoliticsHead', 'piratenkleider' ),
-        'comments'  => '',        
+        'comments'  => '',
         'webfont'   => 1,
         'woff'   => '/fonts/PoliticsHeadv1_9.woff',
         'eot'   => '/fonts/PoliticsHeadv1_9.ttf',
-    ), 
+    ),
     'monospace' => array(
         'title' => __( '"Courier New", Courier, monospace', 'piratenkleider' ),
         'family' => '"Courier New", Courier, monospace',
-    ),    
-      
+    ),
+
 );
 
 /*
@@ -576,7 +576,7 @@ $default_alternativestyles = array(
              __('Argentina', 'piratenkleider' ) => 'http://partidopirata.com.ar/',
              __('Australia', 'piratenkleider' ) => 'https://pirateparty.org.au/',
              __('Austria', 'piratenkleider' ) => 'https://www.piratenpartei.at/',
-             __('Belarus', 'piratenkleider' ) => 'https://pirates.by/',            
+             __('Belarus', 'piratenkleider' ) => 'https://pirates.by/',
              __('Beligium', 'piratenkleider' ) => 'https://pirateparty.be/',
              __('Brazil', 'piratenkleider' ) => 'http://partidopirata.org/',
              __('Canada', 'piratenkleider' ) => 'https://pirateparty.ca/',
@@ -589,14 +589,14 @@ $default_alternativestyles = array(
              __('Estonia', 'piratenkleider' ) => 'http://piraadipartei.ee/',
              __('Finland', 'piratenkleider' ) => 'https://piraattipuolue.fi/',
              __('France', 'piratenkleider' ) => 'https://partipirate.org/',
-             __('Germany', 'piratenkleider' ) => 'https://www.piratenpartei.de/', 
+             __('Germany', 'piratenkleider' ) => 'https://www.piratenpartei.de/',
              __('Greece', 'piratenkleider' ) => 'https://www.pirateparty.gr/',
              //__('Guatemala', 'piratenkleider' ) => 'http://partidopirata.org.gt/',
              //__('Hungary', 'piratenkleider' ) => 'http://kalozpart.org/',
              __('Iceland', 'piratenkleider') => 'http://piratar.is/',
              __('Israel', 'piratenkleider') => 'http://piratim.org/',
              __('Italy', 'piratenkleider' ) => 'http://www.partito-pirata.it/',
-             __('Japan', 'piratenkleider' ) =>  'http://ppt.3rin.net/',  
+             __('Japan', 'piratenkleider' ) =>  'http://ppt.3rin.net/',
              __('Kazakhstan', 'piratenkleider' ) => 'http://www.pirateparty.kz/',
              //__('Latvia', 'piratenkleider' ) => 'http://piratupartija.lv/',
              __('Lithuania', 'piratenkleider' ) => 'http://piratupartija.lt/',
@@ -621,7 +621,7 @@ $default_alternativestyles = array(
              __('United States', 'piratenkleider' ) => 'https://pirate-party.us',
              //__('Uruguay', 'piratenkleider' ) => 'http://partidopirata.org.uy/',
          )
-     ), 
+     ),
       __('International (with flags)', 'piratenkleider' ) => array(
          'title' => __('Pirate Parties International', 'piratenkleider' ),
          'url'  => 'https://pp-international.net/',
@@ -674,7 +674,7 @@ $default_alternativestyles = array(
             '<span class="flagicon-us"></span> '. __('United States', 'piratenkleider' ) => 'https://pirate-party.us',
             //'<span class="flagicon-uy"></span> '. __('Uruguay', 'piratenkleider' ) => 'http://partidopirata.org.uy/',
          )
-     ), 
+     ),
      'Baden-Wuerttemberg' => array(
          'title' => __('Pirate Party Country Association','piratenkleider').' Baden-W&uuml;rttemberg',
          'url'  => 'https://piratenpartei-bw.de/',
@@ -688,9 +688,9 @@ $default_alternativestyles = array(
              __('<abbr title="District Chapter">DC</abbr>','piratenkleider').' Reutlingen-T&uuml;bingen' => 'http://piratenpartei-reutlingen-tuebingen.de/',
              __('<abbr title="District Chapter">DC</abbr>','piratenkleider').' Rhein-Neckar/Heidelberg' => 'http://piraten-rnhd.de/',
              __('<abbr title="District Chapter">DC</abbr>','piratenkleider').' Stuttgart' => 'https://www.piratenpartei-stuttgart.de/',
-             __('<abbr title="District Chapter">DC</abbr>','piratenkleider').' Ulm/Alb-Donau-Kreis' => 'http://piratenpartei-ulm.de/',            
+             __('<abbr title="District Chapter">DC</abbr>','piratenkleider').' Ulm/Alb-Donau-Kreis' => 'http://piratenpartei-ulm.de/',
          )
-     ),  
+     ),
      'Bayern' => array(
          'title' => __('Pirate Party Country Association','piratenkleider').' Bayern',
          'url'  => 'https://piratenpartei-bayern.de/',
@@ -701,8 +701,8 @@ $default_alternativestyles = array(
              __('<abbr title="District Association">DA</abbr>','piratenkleider').' Oberpfalz' => 'https://www.piraten-oberpfalz.de/',
              __('<abbr title="District Association">DA</abbr>','piratenkleider').' Schwaben' => 'https://piraten-schwaben.de/',
              __('<abbr title="District Association">DA</abbr>','piratenkleider').' Unterfranken' => 'http://www.piraten-ufr.de/',
-         ) 
-     ), 
+         )
+     ),
     'Brandenburg' => array(
         'title' => __('Pirate Party Country Association','piratenkleider').' Brandenburg',
         'url'  => 'https://www.piratenbrandenburg.de/',
@@ -720,8 +720,8 @@ $default_alternativestyles = array(
             __('<abbr title="Regional Chapter">RC</abbr>','piratenkleider').' S&uuml;dbrandenburg' => 'https://sued.piratenbrandenburg.de/',
         )
     ),
-   
-    
+
+
     'Hamburg' => array(
         'title' => __('Pirate Party Country Association','piratenkleider').' Hamburg',
         'url'  => 'http://piraten-hh.de/',
@@ -762,7 +762,7 @@ $default_alternativestyles = array(
         'sublist' => array(
             __('<abbr title="District Chapter">DC</abbr>','piratenkleider').' Westmecklenburg' => 'http://www.piraten-westmecklenburg.de/',
             'Neubrandenburg' => 'http://piratenpartei-mv.de/partei/stammtische/neubrandenburg/',
-            'Schwerin' => 'http://piratenpartei-mv.de/partei/stammtische/schwerin/',   
+            'Schwerin' => 'http://piratenpartei-mv.de/partei/stammtische/schwerin/',
         )
     ),
    'Niedersachsen' => array(
@@ -782,11 +782,11 @@ $default_alternativestyles = array(
             __('<abbr title="District Chapter">DC</abbr>','piratenkleider').' Stade' => 'https://piraten-stade.de/',
             __('<abbr title="District Chapter">DC</abbr>','piratenkleider').' Verden-Osterholz-Rotenburg' => 'http://www.piraten-verden.de/',
         )
-    ),    
+    ),
     'Nordrhein-Westfalen' => array(
       'title' => __('Pirate Party Country Association','piratenkleider').' Nordrhein-Westfalen',
       'url' => 'http://www.piratenpartei-nrw.de/',
-      'sublist' => array(   
+      'sublist' => array(
             'Aachen' => 'http://www.piratenpartei-aachen.de/',
             'Bielefeld' => 'http://www.piraten-bielefeld.de/',
             'Bochum' => 'http://piratenbochum.de/',
@@ -881,7 +881,7 @@ $default_alternativestyles = array(
     ),
 );
 
-/* 
+/*
  * Teaser symbols
  */
 $defaultplakate_textsymbolliste = array(
@@ -908,29 +908,29 @@ $defaultplakate_textsymbolliste = array(
     'spark'  => "2737",
     'star'  => "2605",
     'eins'  => "2460",
-    'zwei'  => "2461",    
-    'drei'  => "2462", 
+    'zwei'  => "2461",
+    'drei'  => "2462",
     'euro'  => "20AC",
     'dollar'  => "0024",
-    'copyright'  => "00A9",       
+    'copyright'  => "00A9",
 );
 
 
 
  foreach($defaultplakate_textsymbolliste as $i => $value) {
      $defaultplakate_textsymbolliste_entity[$i] = '&#x'.$value.';';
- } 
+ }
  $categories=get_categories(array('orderby' => 'name','order' => 'ASC'));
  foreach($categories as $category) {
      if (!is_wp_error( $category )) {
 	$currentcatliste[$category->cat_ID] = $category->name.' ('.$category->count.' '.__('Entries','piratenkleider').')';
      }
- }        
+ }
 
 
 $setoptions = array(
    'piratenkleider_theme_options'   => array(
-       
+
        'kopfteil'   => array(
            'tabtitle'   => __('Header', 'piratenkleider'),
            'fields' => array(
@@ -1016,8 +1016,8 @@ $setoptions = array(
 		  'liste'   => $default_toplink_liste,
 		  'parent'  => 'toplinks',
 		  'label'   => __( 'Default links for websites as menu in header. Can be replaced by defining a menu in section "Website Menu"', 'piratenkleider' ),
-	      ), 
-               
+	      ),
+
            )
        ),
        'fussteil'   => array(
@@ -1041,7 +1041,7 @@ $setoptions = array(
       'startseite'   => array(
            'tabtitle'   => __('Start page', 'piratenkleider'),
            'fields' => array(
-                            
+
               'aktiv-startseite-kategorien' => array(
                   'type'    => 'bool',
                   'title'   => __( 'Categories', 'piratenkleider' ),
@@ -1054,25 +1054,25 @@ $setoptions = array(
                   'label'   => __( 'Display tagcloud.', 'piratenkleider' ),
                   'default' => $defaultoptions['aktiv-startseite-tags'],
               ),
-            
+
               'artikelstream'  => array(
                   'type'    => 'section',
-                  'title'   => __( 'Entry filter', 'piratenkleider' ),                      
-              ),     
-               
+                  'title'   => __( 'Entry filter', 'piratenkleider' ),
+              ),
+
                'artikelstream-type' => array(
                   'type'    => 'select',
                   'title'   => __( 'Set main entry list', 'piratenkleider' ),
                   'label'   => __( 'Choose which entries are displayed on the start page.', 'piratenkleider' ),
                   'default' => $defaultoptions['artikelstream-type'],
 		  'liste'   =>  array(
-                    0 => __("All entries (from every category) and bookmarks together","piratenkleider"), 
-                    1 => __("Only entries (from every category)","piratenkleider"), 	    
-                    2 => __("All entries, except those from defined categories","piratenkleider"), 
-                    ), 
+                    0 => __("All entries (from every category) and bookmarks together","piratenkleider"),
+                    1 => __("Only entries (from every category)","piratenkleider"),
+                    2 => __("All entries, except those from defined categories","piratenkleider"),
+                    ),
                   'parent'  => 'artikelstream'
-              ), 	
-               
+              ),
+
               'artikelstream-exclusive-catliste' => array(
                   'type'    => 'multiselectlist',
                   'title'   => __( 'Categories', 'piratenkleider' ),
@@ -1080,21 +1080,21 @@ $setoptions = array(
                   'liste'   => $currentcatliste,
                   'default' => $defaultoptions['artikelstream-exclusive-catliste'],
                   'parent'  => 'artikelstream'
-              ),  
+              ),
                'artikelstream-maxnum-main' => array(
                   'type'    => 'number',
                   'title'   => __( 'Number of entries', 'piratenkleider' ),
                   'label'   => __( 'Number of entries in main entry list.', 'piratenkleider' ),
                   'default' => $defaultoptions['artikelstream-maxnum-main'],
                   'parent'  => 'artikelstream'
-              ), 
+              ),
                'artikelstream-nextnum-main' => array(
                   'type'    => 'number',
                   'title'   => __( 'Number of elements for entries list', 'piratenkleider' ),
                   'label'   => __( 'Number of link elements for a list for further entries.', 'piratenkleider' ),
                   'default' => $defaultoptions['artikelstream-nextnum-main'],
                   'parent'  => 'artikelstream'
-              ), 
+              ),
                'artikelstream-numfullwidth-main' => array(
                   'type'    => 'number',
                   'title'   => __( 'Number of entries in big sized view', 'piratenkleider' ),
@@ -1108,139 +1108,139 @@ $setoptions = array(
                   'label'   => __( 'Sets a title above the main entry list.', 'piratenkleider' ),
                   'default' => $defaultoptions['artikelstream-title-main'],
                    'parent'  => 'artikelstream',
-              ), 
+              ),
               'artikelstream-title-maincontinuelist' => array(
                   'type'    => 'text',
                   'title'   => __( 'Title for more entries', 'piratenkleider' ),
                   'label'   => __( 'Sets a title for an additional entry list.', 'piratenkleider' ),
                   'default' => $defaultoptions['artikelstream-title-maincontinuelist'],
                   'parent'  => 'artikelstream',
-              ),                
-               
+              ),
+
               'artikelstream-show-second' => array(
                   'type'    => 'select',
                   'title'   => __( 'Display second entry list', 'piratenkleider' ),
                   'label'   => __( 'Activates a second entry list, made by those article categories which are not part of the main article list.', 'piratenkleider' ),
                   'liste'   => array(
-                      "0" => __("Hide", 'piratenkleider'), 
+                      "0" => __("Hide", 'piratenkleider'),
                       "1" => __("Show",'piratenkleider')),
                   'default' => $defaultoptions['artikelstream-show-second'],
                    'parent'  => 'artikelstream'
-              ), 
-               
+              ),
+
               'artikelstream-maxnum-second' => array(
                   'type'    => 'number',
                   'title'   => __( 'Number of elements in second entry list', 'piratenkleider' ),
                   'label'   => __( 'Sets the number of entries of the second entry list.', 'piratenkleider' ),
                   'default' => $defaultoptions['artikelstream-maxnum-second'],
                   'parent'  => 'artikelstream'
-              ), 
+              ),
              'artikelstream-nextnum-second' => array(
                   'type'    => 'number',
                   'title'   => __( 'Number more entries', 'piratenkleider' ),
                   'label'   => __( 'Number of link elements for a list for further entries.', 'piratenkleider' ),
                   'default' => $defaultoptions['artikelstream-nextnum-second'],
                   'parent'  => 'artikelstream'
-              ), 
-                              
+              ),
+
                'artikelstream-numfullwidth-second' => array(
                   'type'    => 'number',
                   'title'   => __( 'Number of entries in big sized view', 'piratenkleider' ),
                   'label'   => __( 'How many entries will be displayed in 100% width of content size. (Notice: Depends on design!)', 'piratenkleider' ),
                   'default' => $defaultoptions['artikelstream-numfullwidth-second'],
                   'parent'  => 'artikelstream'
-              ), 
+              ),
             'artikelstream-title-second' => array(
                   'type'    => 'text',
                   'title'   => __( 'Title second entry list', 'piratenkleider' ),
                   'label'   => __( 'Sets a title above the second entry list.', 'piratenkleider' ),
                   'default' => $defaultoptions['artikelstream-title-second'],
                    'parent'  => 'artikelstream',
-              ), 
+              ),
               'artikelstream-title-secondcontinuelist' => array(
                   'type'    => 'text',
                   'title'   => __( 'Title for more entries', 'piratenkleider' ),
                   'label'   => __( 'Subtitle for an additional entry list.', 'piratenkleider' ),
                   'default' => $defaultoptions['artikelstream-title-secondcontinuelist'],
                   'parent'  => 'artikelstream',
-              ),                
-              
-               
+              ),
+
+
               'artikelstream-show-linktipps' => array(
                   'type'    => 'select',
                   'title'   => __( 'Bookmarks', 'piratenkleider' ),
                   'label'   => __( 'Display a bookmark section after main entry list, forming an own entry list. This list is positioned before the second entry list.', 'piratenkleider' ),
-                  'liste'   => array("0" => __("Hide", 'piratenkleider'), 
+                  'liste'   => array("0" => __("Hide", 'piratenkleider'),
                       "1" => __("Show",'piratenkleider')),
                   'default' => $defaultoptions['artikelstream-show-linktipps'],
                    'parent'  => 'artikelstream'
-              ), 
+              ),
               'artikelstream-maxnum-linktipps' => array(
                   'type'    => 'number',
                   'title'   => __( 'Number of bookmarks', 'piratenkleider' ),
                   'label'   => __( 'Number of bookmarks to display.', 'piratenkleider' ),
                   'default' => $defaultoptions['artikelstream-maxnum-linktipps'],
                   'parent'  => 'artikelstream'
-              ), 
+              ),
              'artikelstream-nextnum-linktipps' => array(
                   'type'    => 'number',
                   'title'   => __( 'Additional bookmarks', 'piratenkleider' ),
                   'label'   => __( 'Number of additional bookmarks as a list.', 'piratenkleider' ),
                   'default' => $defaultoptions['artikelstream-nextnum-linktipps'],
                   'parent'  => 'artikelstream'
-              ), 
+              ),
              'artikelstream-title-linktipps' => array(
                   'type'    => 'text',
                   'title'   => __( 'Title for bookmark section', 'piratenkleider' ),
                   'label'   => __( 'Subtitle for bookmark section.', 'piratenkleider' ),
                   'default' => $defaultoptions['artikelstream-title-linktipps'],
                    'parent'  => 'artikelstream',
-              ), 
+              ),
               'artikelstream-title-linktippcontinuelist' => array(
                   'type'    => 'text',
                   'title'   => __( 'Title additional bookmarks', 'piratenkleider' ),
                   'label'   => __( 'Subtitle for list of additional bookmarks.', 'piratenkleider' ),
                   'default' => $defaultoptions['artikelstream-title-linktippcontinuelist'],
                   'parent'  => 'artikelstream',
-              ), 
+              ),
             'artikelstream-show-widget' => array(
                   'type'    => 'select',
                   'title'   => __( 'Widget', 'piratenkleider' ),
                   'label'   => __( 'Display a widget section after main entry list. This widget can be used to display text or even feeds of external sources.', 'piratenkleider' ),
-                  'liste'   => array("0" => __("Hide", 'piratenkleider'), 
+                  'liste'   => array("0" => __("Hide", 'piratenkleider'),
                       "1" => __("Show",'piratenkleider')),
                   'default' => $defaultoptions['artikelstream-show-widget'],
                    'parent'  => 'artikelstream'
-              ), 
+              ),
 
- 
-            
+
+
             'auszuege'  => array(
                   'type'    => 'section',
-                  'title'   => __( 'Layout for entry excerpts', 'piratenkleider' ),                      
-              ),     
-                              
+                  'title'   => __( 'Layout for entry excerpts', 'piratenkleider' ),
+              ),
+
              'teaser_maxlength' => array(
                   'type'    => 'number',
                   'title'   => __( 'Length', 'piratenkleider' ),
                   'label'   => __( 'Maximum numbers of chars in excerpt.', 'piratenkleider' ),
                   'default' => $defaultoptions['teaser_maxlength'],
                  'parent'  => 'auszuege'
-              ),                        
+              ),
               'teaser-titleup' => array(
                   'type'    => 'bool',
                   'title'   => __( 'Title up', 'piratenkleider' ),
                   'label'   => __( 'Title above thumbnail, date and text.', 'piratenkleider' ),
                   'default' => $defaultoptions['teaser-titleup'],
                   'parent'  => 'auszuege'
-              ), 
+              ),
               'teaser-datebox' => array(
                   'type'    => 'select',
                   'title'   => __( 'Layout entry info', 'piratenkleider' ),
                   'label'   => __( 'Sets a thumbnail, image, datebox, YouTube video or default image in front of excerpt.', 'piratenkleider' ),
                   'default' => $defaultoptions['teaser-datebox'],
 		  'liste'   =>  array(
-				0 => __("Display datebox","piratenkleider"), 
+				0 => __("Display datebox","piratenkleider"),
 				1 => __("Display in order: "
                                         . "thumbnail, first image in content if exist, "
                                         . "embedded YouTube video (first existing YouTube link in content) "
@@ -1248,54 +1248,54 @@ $setoptions = array(
                                 2 => __("Display in order: "
                                         . "first image in content if exist, thumbnail, "
                                         . "embedded YouTube video (first existing YouTube link in content) "
-                                        . "or default image","piratenkleider"), 
+                                        . "or default image","piratenkleider"),
                                 3 => __("Display in order: "
                                         . "embedded YouTube video (first existing YouTube link in content), "
                                         . "thumbnail, first image in content if exist, "
-                                        . "or default image","piratenkleider"), 
+                                        . "or default image","piratenkleider"),
                                 4 => __("Display in order: "
                                         . "embedded YouTube video (first existing YouTube link in content), "
                                         . "first image in content if exist, thumbnail, "
                                         . "or default image","piratenkleider"),
-				5 => __("Hide entry info","piratenkleider")), 
+				5 => __("Hide entry info","piratenkleider")),
                   'parent'  => 'auszuege'
-              ), 	              
+              ),
 	      'teaser-floating' => array(
                   'type'    => 'bool',
                   'title'   => __( 'Floating excerpt', 'piratenkleider' ),
                   'label'   => __( 'Excerpt text will float around entry info.', 'piratenkleider' ),
                   'default' => $defaultoptions['teaser-floating'],
                   'parent'  => 'auszuege'
-              ),  
+              ),
                'teaser-dateline' => array(
                   'type'    => 'bool',
                   'title'   => __( 'Date', 'piratenkleider' ),
                   'label'   => __( 'Show date as first line after title.', 'piratenkleider' ),
                   'default' => $defaultoptions['teaser-dateline'],
                   'parent'  => 'auszuege'
-              ), 
-               
+              ),
+
                 'teaser-maxlength-halfwidth' => array(
                   'type'    => 'number',
                   'title'   => __( 'Length', 'piratenkleider' ),
                   'label'   => __( 'Maximum numbers of chars in excerpt. (Small entry teaser in half content width).', 'piratenkleider' ),
                   'default' => $defaultoptions['teaser-maxlength-halfwidth'],
 		'parent'  => 'auszuege'
-              ),                 
+              ),
              'teaser-titleup-halfwidth' => array(
                   'type'    => 'bool',
                   'title'   => __( 'Title up', 'piratenkleider' ),
                   'label'   => __( 'Title above thumbnail, date and text. (Small entry teaser in half content width).', 'piratenkleider' ),
                   'default' => $defaultoptions['teaser-titleup-halfwidth'],
                   'parent'  => 'auszuege'
-              ), 
+              ),
               'teaser-datebox-halfwidth' => array(
                   'type'    => 'select',
                   'title'   => __( 'Layout entry info', 'piratenkleider' ),
                   'label'   => __( 'Sets a thumbnail, image, datebox, YouTube video or default image in front of excerpt. (Small entry teaser in half content width).', 'piratenkleider' ),
                   'default' => $defaultoptions['teaser-datebox'],
 		  'liste'   =>  array(
-				0 => __("Display datebox","piratenkleider"), 
+				0 => __("Display datebox","piratenkleider"),
 				1 => __("Display in order: "
                                         . "thumbnail, first image in content if exist, "
                                         . "embedded YouTube video (first existing YouTube link in content) "
@@ -1303,47 +1303,47 @@ $setoptions = array(
                                 2 => __("Display in order: "
                                         . "first image in content if exist, thumbnail, "
                                         . "embedded YouTube video (first existing YouTube link in content) "
-                                        . "or default image","piratenkleider"), 
+                                        . "or default image","piratenkleider"),
                                 3 => __("Display in order: "
                                         . "embedded YouTube video (first existing YouTube link in content), "
                                         . "thumbnail, first image in content if exist, "
-                                        . "or default image","piratenkleider"), 
+                                        . "or default image","piratenkleider"),
                                 4 => __("Display in order: "
                                         . "embedded YouTube video (first existing YouTube link in content), "
                                         . "first image in content if exist, thumbnail, "
                                         . "or default image","piratenkleider"),
-				5 => __("Hide entry info","piratenkleider")), 
+				5 => __("Hide entry info","piratenkleider")),
 
-                  'parent'  => 'auszuege'		  
-              ), 
+                  'parent'  => 'auszuege'
+              ),
 	      'teaser-floating-halfwidth' => array(
                   'type'    => 'bool',
                   'title'   => __( 'Floating excerpt', 'piratenkleider' ),
                   'label'   => __( 'Excerpt text will float around entry info. (Small entry teaser in half content width).', 'piratenkleider' ),
                   'default' => $defaultoptions['teaser-floating-halfwidth'],
                   'parent'  => 'auszuege'
-              ), 	       
-	       
+              ),
+
                'teaser-dateline-halfwidth' => array(
                   'type'    => 'bool',
                   'title'   => __( 'Date', 'piratenkleider' ),
                   'label'   => __( 'Show date as first line after title. (Small entry teaser in half content width).', 'piratenkleider' ),
                   'default' => $defaultoptions['teaser-dateline-halfwidth'],
                   'parent'  => 'auszuege'
-              ), 
-                    
+              ),
+
 	      'artikelstream-content-allow3column' => array(
                   'type'    => 'bool',
                   'title'   => __( 'Two/Three column view', 'piratenkleider' ),
                   'label'   => __( 'On big sized screen view (above 1350px resolution) use three column excerpts.', 'piratenkleider' ),
                   'default' => $defaultoptions['artikelstream-content-allow3column'],
                   'parent'  => 'auszuege'
-              ), 	       
-	       
-	       
+              ),
+
+
               'sliderpars'  => array(
                   'type'    => 'section',
-                  'title'   => __( 'Slider', 'piratenkleider' ),                      
+                  'title'   => __( 'Slider', 'piratenkleider' ),
               ),
               'slider-aktiv' => array(
                   'type'    => 'bool',
@@ -1359,14 +1359,14 @@ $setoptions = array(
                   'label'   => __( 'Text in front of every slider excerpt.', 'piratenkleider' ),
                   'default' => $defaultoptions['teaser-subtitle'],
                   'parent'  => 'sliderpars'
-              ),  
+              ),
              'teaser-title-maxlength' => array(
                   'type'    => 'number',
                   'title'   => __( 'Title length', 'piratenkleider' ),
                   'label'   => __( 'Maximum number of chars for title in slider.', 'piratenkleider' ),
                   'default' => $defaultoptions['teaser-title-maxlength'],
                    'parent'  => 'sliderpars'
-              ),   
+              ),
              'teaser-title-words' => array(
                   'type'    => 'number',
                   'title'   => __( 'Number of words', 'piratenkleider' ),
@@ -1374,9 +1374,9 @@ $setoptions = array(
                   'default' => $defaultoptions['teaser-title-words'],
                    'parent'  => 'sliderpars'
               ),
-                              
-               
-               
+
+
+
               'slider-catid' => array(
                   'type'    => 'select',
                   'title'   => __( 'Category', 'piratenkleider' ),
@@ -1384,7 +1384,7 @@ $setoptions = array(
                   'liste'   => $currentcatliste,
                   'default' => $defaultoptions['slider-catid'],
                    'parent'  => 'sliderpars'
-              ), 
+              ),
               'slider-numberarticle' => array(
                   'type'    => 'select',
                   'title'   => __( 'Number slides', 'piratenkleider' ),
@@ -1392,7 +1392,7 @@ $setoptions = array(
                   'liste'   => array(2 => 2,3 => 3, 4 => 4, 5 => 5, 6 => 6, 7 => 7),
                   'default' => $defaultoptions['slider-numberarticle'],
                    'parent'  => 'sliderpars'
-              ), 
+              ),
               'slider-animationType' => array(
                   'type'    => 'select',
                   'title'   => __( 'Animation', 'piratenkleider' ),
@@ -1400,8 +1400,8 @@ $setoptions = array(
                   'liste'   => array("fade" => "fade", "slide" => "slide"),
                   'default' => $defaultoptions['slider-animationType'],
                    'parent'  => 'sliderpars'
-              ), 
-                 
+              ),
+
               'slider-Direction' => array(
                   'type'    => 'select',
                   'title'   => __( 'Direction', 'piratenkleider' ),
@@ -1409,21 +1409,21 @@ $setoptions = array(
                   'liste'   => array("horizontal" => "horizontal" , "vertical" => "vertical"),
                   'default' => $defaultoptions['slider-Direction'],
                    'parent'  => 'sliderpars'
-              ), 
+              ),
               'slider-slideshowSpeed' => array(
                   'type'    => 'number',
                   'title'   => __( 'Show Duration', 'piratenkleider' ),
                   'label'   => __( 'Duration for presenting a slide in milliseconds.', 'piratenkleider' ),
                   'default' => $defaultoptions['slider-slideshowSpeed'],
                    'parent'  => 'sliderpars'
-              ), 
+              ),
               'slider-animationDuration' => array(
                   'type'    => 'number',
                   'title'   => __( 'Animation duration', 'piratenkleider' ),
                   'label'   => __( 'Duration for sliding effect in milliseconds.', 'piratenkleider' ),
                   'default' => $defaultoptions['slider-animationDuration'],
                    'parent'  => 'sliderpars'
-              ),  
+              ),
              'teaser-type' => array(
                   'type'    => 'select',
                   'title'   => __( 'Slide Size', 'piratenkleider' ),
@@ -1431,7 +1431,7 @@ $setoptions = array(
                   'liste'   => array("big" => "Big thumbnail", "small" => "Small thumbnail"),
                   'default' => $defaultoptions['teaser-type'],
                    'parent'  => 'sliderpars'
-              ), 
+              ),
                'teaser-showcredits' => array(
                   'type'    => 'bool',
                   'title'   => __( 'Show credits', 'piratenkleider' ),
@@ -1444,38 +1444,38 @@ $setoptions = array(
                   'type'    => 'imageurl',
                   'title'   => __( 'Default slider image', 'piratenkleider' ),
                   'label'   => __( 'Sets a default slider image in case no thumbnail is present in entry.', 'piratenkleider' ),
-                  'default' => $defaultoptions['slider-defaultbildsrc'],		                     
+                  'default' => $defaultoptions['slider-defaultbildsrc'],
 		  'parent'  => 'sliderpars'
               ),
 
-               
-               
+
+
           )
-       ), 
+       ),
        'contentbereich'   => array(
            'tabtitle'   => __('Entries and pages', 'piratenkleider'),
            'fields' => array(
-	                    
+
               'post_disclaimer' => array(
                   'type'    => 'textarea',
                   'title'   => __( 'Disclaimer', 'piratenkleider' ),
                   'label'   => __( 'Default disclaimer text.', 'piratenkleider' ),
                   'default' => $defaultoptions['disclaimer_post'],
-              ),    	       
-	       
+              ),
+
 	      'category'  => array(
                   'type'    => 'section',
                   'title'   => __( 'Index pages', 'piratenkleider' ),
               ),
-	       
+
 	      'category-teaser'   => array(
                   'type'    => 'bool',
                   'title'   => __( 'Slider', 'piratenkleider' ),
                   'label'   => __( 'Activate slider like on start page.', 'piratenkleider' ),
                   'default' => $defaultoptions['category-teaser'],
 		  'parent'  => 'category'
-              ),   	       
-	       
+              ),
+
 	    'category-num-article-fullwidth' => array(
                   'type'    => 'number',
                   'title'   => __( 'Number of entries in big sized view', 'piratenkleider' ),
@@ -1490,28 +1490,28 @@ $setoptions = array(
                   'liste'   => array(0 => 0, 2 => 2, 4 => 4, 6 => 6, 8 => 8, 10=>10, 12=>12, 14=>14, 16=>16),
                   'default' => $defaultoptions['category-num-article-halfwidth'],
 		  'parent'  => 'category'
-              ),    
+              ),
 	    'category-teaser-maxlength' => array(
                   'type'    => 'number',
                   'title'   => __( 'Length of excerpt', 'piratenkleider' ),
                   'label'   => __( 'Maximum numbers of chars in excerpt.', 'piratenkleider' ),
                   'default' => $defaultoptions['category-teaser-maxlength'],
 		'parent'  => 'category'
-              ),                 
+              ),
              'category-teaser-titleup' => array(
                   'type'    => 'bool',
                   'title'   => __( 'Title up', 'piratenkleider' ),
                   'label'   => __( 'Title above thumbnail, date and text.', 'piratenkleider' ),
                   'default' => $defaultoptions['category-teaser-titleup'],
                   'parent'  => 'category'
-              ), 
+              ),
               'category-teaser-datebox' => array(
                   'type'    => 'select',
                   'title'   => __( 'Layout entry info', 'piratenkleider' ),
                   'label'   => __( 'Sets a thumbnail, image, datebox, youtube-video or default image in front of excerpt. (Small entry teaser in half content width).', 'piratenkleider' ),
                   'default' => $defaultoptions['category-teaser-datebox'],
 		  'liste'   =>  array(
-				0 => __("Display datebox","piratenkleider"), 
+				0 => __("Display datebox","piratenkleider"),
 				1 => __("Display in order: "
                                         . "thumbnail, first image in content if exist, "
                                         . "embedded YouTube video (first existing YouTube link in content) "
@@ -1519,11 +1519,11 @@ $setoptions = array(
                                 2 => __("Display in order: "
                                         . "first image in content if exist, thumbnail, "
                                         . "embedded YouTube video (first existing YouTube link in content) "
-                                        . "or default image","piratenkleider"), 
+                                        . "or default image","piratenkleider"),
                                 3 => __("Display in order: "
                                         . "embedded YouTube video (first existing YouTube link in content), "
                                         . "thumbnail, first image in content if exist, "
-                                        . "or default image","piratenkleider"), 
+                                        . "or default image","piratenkleider"),
                                 4 => __("Display in order: "
                                         . "embedded YouTube video (first existing YouTube link in content), "
                                         . "first image in content if exist, thumbnail, "
@@ -1531,44 +1531,44 @@ $setoptions = array(
 				5 => __("Hide entry info","piratenkleider")),
 
                   'parent'  => 'category'
-              ), 
+              ),
 	    'category-teaser-floating' => array(
                 'type'    => 'bool',
                 'title'   => __( 'Floating excerpt', 'piratenkleider' ),
                 'label'   => __( 'Excerpt text will float around entry info.', 'piratenkleider' ),
                 'default' => $defaultoptions['category-teaser-floating'],
                 'parent'  => 'category'
-            ), 
-	       
+            ),
+
             'category-teaser-dateline' => array(
                 'type'    => 'bool',
                 'title'   => __( 'Date', 'piratenkleider' ),
                 'label'   => __( 'Show date as first line after title.', 'piratenkleider' ),
                 'default' => $defaultoptions['category-teaser-dateline'],
                 'parent'  => 'category'
-            ), 
-               
+            ),
+
             'category-teaser-maxlength-halfwidth' => array(
                 'type'    => 'number',
                 'title'   => __( 'Length of excerpt', 'piratenkleider' ),
                 'label'   => __( 'Maximum numbers of chars in excerpt.', 'piratenkleider' ),
                 'default' => $defaultoptions['category-teaser-maxlength-halfwidth'],
 		'parent'  => 'category'
-            ),                 
+            ),
             'category-teaser-titleup-halfwidth' => array(
                 'type'    => 'bool',
                 'title'   => __( 'Title up', 'piratenkleider' ),
                 'label'   => __( 'Title above thumbnail, date and text.', 'piratenkleider' ),
                 'default' => $defaultoptions['category-teaser-titleup-halfwidth'],
                 'parent'  => 'category'
-            ), 
+            ),
             'category-teaser-datebox-halfwidth' => array(
                 'type'    => 'select',
                 'title'   => __( 'Layout entry info', 'piratenkleider' ),
                 'label'   => __( 'Sets a thumbnail, image, datebox, youtube-video or default image in front of excerpt. (Small entry teaser in half content width).', 'piratenkleider' ),
                 'default' => $defaultoptions['category-teaser-datebox-halfwidth'],
 		'liste'   =>  array(
-				0 => __("Display datebox","piratenkleider"), 
+				0 => __("Display datebox","piratenkleider"),
 				1 => __("Display in order: "
                                         . "thumbnail, first image in content if exist, "
                                         . "embedded YouTube video (first existing YouTube link in content) "
@@ -1576,87 +1576,87 @@ $setoptions = array(
                                 2 => __("Display in order: "
                                         . "first image in content if exist, thumbnail, "
                                         . "embedded YouTube video (first existing YouTube link in content) "
-                                        . "or default image","piratenkleider"), 
+                                        . "or default image","piratenkleider"),
                                 3 => __("Display in order: "
                                         . "embedded YouTube video (first existing YouTube link in content), "
                                         . "thumbnail, first image in content if exist, "
-                                        . "or default image","piratenkleider"), 
+                                        . "or default image","piratenkleider"),
                                 4 => __("Display in order: "
                                         . "embedded YouTube video (first existing YouTube link in content), "
                                         . "first image in content if exist, thumbnail, "
                                         . "or default image","piratenkleider"),
-				5 => __("Hide entry info","piratenkleider")), 
+				5 => __("Hide entry info","piratenkleider")),
 
                 'parent'  => 'category'
-            ), 
+            ),
 	    'category-teaser-floating-halfwidth' => array(
                 'type'    => 'bool',
                 'title'   => __( 'Floating excerpt', 'piratenkleider' ),
                 'label'   => __( 'Excerpt text will float around entry info. (Small entry teaser in half content width).', 'piratenkleider' ),
                 'default' => $defaultoptions['category-teaser-floating-halfwidth'],
                 'parent'  => 'category'
-            ), 
+            ),
             'category-teaser-dateline-halfwidth' => array(
                 'type'    => 'bool',
                 'title'   => __( 'Date', 'piratenkleider' ),
                 'label'   => __( 'Show date as first line after title.', 'piratenkleider' ),
                 'default' => $defaultoptions['category-teaser-dateline-halfwidth'],
                 'parent'  => 'category'
-            ), 
+            ),
 	    'continuelink'   => array(
                 'type'    => 'select',
                 'title'   => __( 'Show Continue', 'piratenkleider' ),
                 'label'   => __( 'Whether to display a continue reading link.', 'piratenkleider' ),
                 'default' => $defaultoptions['category-teaser-datebox-halfwidth'],
 		'liste'   =>  array(
-				0 => __("Only if entry text ist longer as excerpt","piratenkleider"), 
-				1 => __("Always","piratenkleider"), 	    
-			        2 => __("Never","piratenkleider"), 	    
-				), 
+				0 => __("Only if entry text ist longer as excerpt","piratenkleider"),
+				1 => __("Always","piratenkleider"),
+			        2 => __("Never","piratenkleider"),
+				),
                 'parent'  => 'category'
-            ),  
-               
-    
+            ),
+
+
 	    'darstellungseiten'  => array(
                   'type'    => 'section',
                   'title'   => __( 'Pages', 'piratenkleider' ),
             ),
-	       
+
 	    'aktiv-defaultseitenbild' => array(
                 'type'    => 'bool',
                 'title'   => __( 'Default image for pages', 'piratenkleider' ),
                 'label'   => __( 'Display default image for pages without own thumbnail.', 'piratenkleider' ),
                 'default' => $defaultoptions['aktiv-defaultseitenbild'],
 		'parent'  => 'darstellungseiten'
-            ),	      
+            ),
 	    'seitenbild-size' => array(
                 'type'    => 'select',
                 'title'   => __( 'Size', 'piratenkleider' ),
                 'label'   => __( 'Sets maximum height for page image', 'piratenkleider' ),
-                'default' => $defaultoptions['seitenbild-size'],		                     
+                'default' => $defaultoptions['seitenbild-size'],
 		'liste'   => array(0 => "small (150px)", 1 => "big (240px)"),
 		'parent'  => 'darstellungseiten'
-            ),	
+            ),
 	    'seiten-defaultbildsrc' => array(
                 'type'    => 'imageurl',
                 'title'   => __( 'Default image', 'piratenkleider' ),
                 'label'   => __( 'Sets a default image.', 'piratenkleider' ),
-                'default' => $defaultoptions['src-default-symbolbild'],		                     
+                'default' => $defaultoptions['src-default-symbolbild'],
 		'parent'  => 'darstellungseiten',
 		'maxwidth' => 705,
 		'maxheight' => 240,
-            ),	
-	
-	
+            ),
+
+
 	    'darstellungartikel'  => array(
                 'type'    => 'section',
                 'title'   => __( 'Entries', 'piratenkleider' ),
             ),
-	       
+
 	    'aktiv-artikelbild' => array(
                 'type'    => 'bool',
                 'title'   => __( 'Default image for entries', 'piratenkleider' ),
-                'label'   => __( 'Display default image for entries without own thumbnail.', 'piratenkleider' ),		  
+                'label'   => __( 'Display default image for entries without own thumbnail.', 'piratenkleider' ),
                 'default' => $defaultoptions['aktiv-artikelbild'],
 		'parent'  => 'darstellungartikel'
             ),
@@ -1664,10 +1664,10 @@ $setoptions = array(
                 'type'    => 'select',
                 'title'   => __( 'Size', 'piratenkleider' ),
                 'label'   => __( 'Sets maximum height for page image.', 'piratenkleider' ),
-                'default' => $defaultoptions['artikelbild-size'],		                     
+                'default' => $defaultoptions['artikelbild-size'],
                 'liste'   => array(0 => "small (150px)", 1 => "big (240px)"),
 		'parent'  => 'darstellungartikel'
-            ),	
+            ),
 
 	    'artikelbild-src'  => array(
                 'type'    => 'imageurl',
@@ -1678,7 +1678,7 @@ $setoptions = array(
 		'maxwidth' => 705,
 		'maxheight' => 240,
             ),
-	       	       
+
 	    'darstellungindexseiten'  => array(
                 'type'    => 'section',
                 'title'   => __( 'Index pages', 'piratenkleider' ),
@@ -1694,11 +1694,11 @@ $setoptions = array(
                   'type'    => 'select',
                   'title'   => __( 'Size', 'piratenkleider' ),
                   'label'   => __( 'Sets maximum height for page image.', 'piratenkleider' ),
-                  'default' => $defaultoptions['indexseitenbild-size'],		                     
+                  'default' => $defaultoptions['indexseitenbild-size'],
 		  'liste'   => array(0 => "small (150px)", 1 => "big (240px)"),
 		  'parent'  => 'darstellungindexseiten'
               ),
-	      	       
+
 	     'src-default-symbolbild-404' => array(
 		    'type'    => 'imageurl',
 		    'title'   => __( 'Errorpage default image', 'piratenkleider' ),
@@ -1716,7 +1716,7 @@ $setoptions = array(
                   'parent'  => 'darstellungindexseiten',
 		  'maxwidth' => 705,
 		    'maxheight' => 240,
-              ), 
+              ),
 	      'src-default-symbolbild-tag' => array(
                   'type'    => 'imageurl',
                   'title'   => __( 'Tag page default image', 'piratenkleider' ),
@@ -1725,7 +1725,7 @@ $setoptions = array(
                   'parent'  => 'darstellungindexseiten',
 		   'maxwidth' => 705,
 		    'maxheight' => 240,
-              ), 
+              ),
 	       'src-default-symbolbild-author' => array(
                   'type'    => 'imageurl',
                   'title'   => __( 'Author page default image', 'piratenkleider' ),
@@ -1734,7 +1734,7 @@ $setoptions = array(
                   'parent'  => 'darstellungindexseiten',
 		    'maxwidth' => 705,
 		    'maxheight' => 240,
-              ), 
+              ),
 	       'src-default-symbolbild-archive' => array(
                   'type'    => 'imageurl',
                   'title'   => __( 'Archive default image', 'piratenkleider' ),
@@ -1743,7 +1743,7 @@ $setoptions = array(
                   'parent'  => 'darstellungindexseiten',
 		    'maxwidth' => 705,
 		    'maxheight' => 240,
-              ), 
+              ),
 	        'src-default-symbolbild-search' => array(
                   'type'    => 'imageurl',
                   'title'   => __( 'Search page default image', 'piratenkleider' ),
@@ -1752,7 +1752,7 @@ $setoptions = array(
                   'parent'  => 'darstellungindexseiten',
 		     'maxwidth' => 705,
 		    'maxheight' => 240,
-              ), 
+              ),
 	       'src-default-symbolbild-person' => array(
                   'type'    => 'imageurl',
                   'title'   => __( 'Business card default image', 'piratenkleider' ),
@@ -1761,9 +1761,9 @@ $setoptions = array(
                   'parent'  => 'darstellungindexseiten',
 		     'maxwidth' => 705,
 		    'maxheight' => 240,
-              ), 
-	       
-	       
+              ),
+
+
 	      'src-default-symbolbild' => array(
                   'type'    => 'imageurl',
                   'title'   => __( 'Template default image', 'piratenkleider' ),
@@ -1772,9 +1772,9 @@ $setoptions = array(
                   'parent'  => 'darstellungindexseiten',
 		   'maxwidth' => 705,
 		    'maxheight' => 240,
-              ),  
+              ),
 
-	       
+
 	      'kommentare'  => array(
                   'type'    => 'section',
                   'title'   => __( 'Comments', 'piratenkleider' ),
@@ -1783,14 +1783,14 @@ $setoptions = array(
                   'type'    => 'bool',
                   'title'   => __( 'Reply for comments', 'piratenkleider' ),
                   'label'   => __( 'Allow to answer directly to other comments instead of the entry only.', 'piratenkleider' ),
-                  'default' => $defaultoptions['aktiv-commentreplylink'],	
+                  'default' => $defaultoptions['aktiv-commentreplylink'],
 		 'parent'   => 'kommentare'
               ),
 	      'aktiv-commentsonpages' => array(
                   'type'    => 'bool',
                   'title'   => __( 'Comments on pages', 'piratenkleider' ),
                   'label'   => __( 'Activates comments on pages instead of entries only.', 'piratenkleider' ),
-                  'default' => $defaultoptions['aktiv-commentsonpages'],	
+                  'default' => $defaultoptions['aktiv-commentsonpages'],
 		 'parent'   => 'kommentare'
               ),
               'comments_disclaimer'  => array(
@@ -1799,18 +1799,18 @@ $setoptions = array(
                   'label'   => __( 'Sets a default disclaimer text, which can be shown above the comment form.', 'piratenkleider' ),
                   'default' => $defaultoptions['comments_disclaimer'],
 		  'parent'   => 'kommentare'
-              ),               
+              ),
                'zeige_commentbubble_null' => array(
                   'type'    => 'bool',
                   'title'   => __( 'Comment Number', 'piratenkleider' ),
                   'label'   => __( 'Displays number of comments, even if there are currently none on an entry.', 'piratenkleider' ),
                   'default' => $defaultoptions['zeige_commentbubble_null'],
 		   'parent'   => 'kommentare'
-              ),            
-	       
+              ),
+
           )
        ),
-       
+
        'sidebar'   => array(
            'tabtitle'   => __('Sidebar', 'piratenkleider'),
            'fields' => array(
@@ -1824,7 +1824,7 @@ $setoptions = array(
                     'label'   => __( 'Sets type of menu to display on sidebar on subpages.', 'piratenkleider' ),
                     'default' => $defaultoptions['seitenmenu_mode'],
                     'liste'   => array(
-                        0 => __("Use menu", 'piratenkleider'), 
+                        0 => __("Use menu", 'piratenkleider'),
                         1 => __("Use page hierarchy", 'piratenkleider')),
                     'parent'  => 'seitenmenu',
               ),
@@ -1842,7 +1842,7 @@ $setoptions = array(
                   'default' => $defaultoptions['zeige_sidebarpagemenu'],
                   'parent'  => 'seitenmenu',
               ),
-              
+
               'newsletter' => array(
                   'type'    => 'bool',
                   'title'   => __( 'Newsletter', 'piratenkleider' ),
@@ -1854,7 +1854,7 @@ $setoptions = array(
                   'title'   => __( 'Newsletter / Mailing list', 'piratenkleider' ),
                   'label'   => __( 'Default URL for a subscription for a mailing list', 'piratenkleider' ),
                   'default' => $defaultoptions['url-newsletteranmeldung'],
-              ), 
+              ),
               'plakate'  => array(
                   'type'    => 'section',
                   'title'   => __( 'Posters', 'piratenkleider' ),
@@ -1865,41 +1865,41 @@ $setoptions = array(
                   'label'   => __( 'Activates a slider with defined posters or other images in sidebar.', 'piratenkleider' ),
                   'default' => $defaultoptions['slider-defaultwerbeplakate'],
                    'parent'  => 'plakate',
-              ),	   
-	       
+              ),
+
 	      'plakate-src' => array(
                   'type'    => 'bilddirchecklist',
                   'title'   => __( 'Select poster', 'piratenkleider' ),
                   'label'   => __( 'Select poster to display as slides in sidebar.', 'piratenkleider' ),
-                  'default' => $defaultoptions['dir-default-plakate'],		                     
+                  'default' => $defaultoptions['dir-default-plakate'],
 		  'parent'  => 'plakate'
-              ), 
-	       
+              ),
+
               'plakate-title' => array(
                   'type'    => 'text',
                   'title'   => __( 'Optional alternative text', 'piratenkleider' ),
                   'label'   => __( 'Sets a text as alternative text on all poster slides.', 'piratenkleider' ),
                   'default' => $defaultoptions['plakate-title'],
                   'parent'  => 'plakate',
-              ),   
+              ),
               'plakate-url' => array(
                   'type'    => 'url',
                   'title'   => __( 'Optional URL', 'piratenkleider' ),
                   'label'   => __( 'Sets an URL as target on clicking on poster slides.', 'piratenkleider' ),
                   'default' => $defaultoptions['plakate-url'],
                   'parent'  => 'plakate',
-              ),   
+              ),
               'plakate-altadressen' => array(
                   'type'    => 'textarea',
                   'title'   => __( 'Upload and select other posters', 'piratenkleider' ),
                   'label'   => __('Manage other images to use for slider.', 'piratenkleider'),
                   'default' => $defaultoptions['plakate-altadressen'],
                   'parent'  => 'plakate',
-              ),   
-               
+              ),
+
               'teaser1'  => array(
                   'type'    => 'section',
-                  'title'   => __( 'Teaser 1', 'piratenkleider' ),                      
+                  'title'   => __( 'Teaser 1', 'piratenkleider' ),
               ),
                'teaserlink1-symbol' => array(
                   'type'    => 'select',
@@ -1932,7 +1932,7 @@ $setoptions = array(
               ),
               'teaser2'  => array(
                   'type'    => 'section',
-                  'title'   => __( 'Teaser 2', 'piratenkleider' ),                      
+                  'title'   => __( 'Teaser 2', 'piratenkleider' ),
               ),
                'teaserlink2-symbol' => array(
                   'type'    => 'select',
@@ -1962,10 +1962,10 @@ $setoptions = array(
                   'label'   => __( 'Link target.', 'piratenkleider' ),
                   'default' => $defaultoptions['teaserlink2-url'],
                     'parent'  => 'teaserlink2',
-              ),  
+              ),
                 'teaser3'  => array(
                   'type'    => 'section',
-                  'title'   => __( 'Teaser 3', 'piratenkleider' ),                      
+                  'title'   => __( 'Teaser 3', 'piratenkleider' ),
               ),
                'teaserlink3-symbol' => array(
                   'type'    => 'select',
@@ -1995,38 +1995,38 @@ $setoptions = array(
                   'label'   => __( 'Link target.', 'piratenkleider' ),
                   'default' => $defaultoptions['teaserlink3-url'],
                     'parent'  => 'teaserlink3',
-              ),  
-               
-               
+              ),
+
+
           )
        ),
-       
+
        'socialmedia'   => array(
            'tabtitle'   => __('Social Media', 'piratenkleider'),
            'fields' => array(
-              
+
               'alle-socialmediabuttons' => array(
                   'type'    => 'select',
                   'title'   => __( 'Position', 'piratenkleider' ),
                   'label'   => __( 'Where to display the social media buttons (depending on design).', 'piratenkleider' ),
                   'liste'   => array(
-		      0 => __( 'Do not display social media buttons', 'piratenkleider' ) ,  
-		      1 => __( 'Header', 'piratenkleider' ), 
+		      0 => __( 'Do not display social media buttons', 'piratenkleider' ) ,
+		      1 => __( 'Header', 'piratenkleider' ),
 		      2 => __( 'Aside of content', 'piratenkleider' )),
                   'default' => $defaultoptions['alle-socialmediabuttons'],
-              ),  
+              ),
 	      'sm-list'  => array(
 		  'type'    => 'urlchecklist',
 		  'title'   => __( 'Social Media sites', 'piratenkleider' ),
 		  'liste'   => $default_socialmedia_liste,
-	      ), 
-	                      
+	      ),
+
           )
        ),
 	'design'   => array(
            'tabtitle'   => __( 'Design', 'piratenkleider' ),
            'fields' => array(
-            
+
 	       'style'  => array(
                   'type'    => 'section',
                   'title'   => __( 'Stylesheet', 'piratenkleider' ),
@@ -2037,7 +2037,7 @@ $setoptions = array(
                   'label'   => __( 'Switches stylesheet to one of the following subdesigns.', 'piratenkleider' ),
                   'default' => 'style.css',
                   'liste'   =>  $default_alternativestyles,
-		  'parent'  => 'style', 
+		  'parent'  => 'style',
               ),
 
 	    'css-colorfile' => array(
@@ -2046,13 +2046,13 @@ $setoptions = array(
                   'label'   => __( 'Changes colors of website (only by using Piratenkleider base stylesheet).', 'piratenkleider' ),
                   'default' => '-',
                   'liste'   => $default_colorstyles,
-		   'parent'  => 'style', 
+		   'parent'  => 'style',
               ),
               'aktiv-stylefile' => array(
                   'type'    => 'file',
                   'title'   => __( 'CSS file', 'piratenkleider' ),
                   'label'   => __( 'Uploads an own CSS file.', 'piratenkleider' ),
-		   'parent'  => 'style',   
+		   'parent'  => 'style',
               ),
                'stylefile-position' => array(
                   'type'    => 'select',
@@ -2060,22 +2060,22 @@ $setoptions = array(
                   'label'   => __( 'Sets priority and order for own css file in relation to theme files.', 'piratenkleider' ),
                   'default' => 0,
                   'liste'   => array(
-		      0 => __('None (Deactive)', 'piratenkleider'),
+		      0 => __('None (Disabled)', 'piratenkleider'),
                       1 => __('Previews (uses own css first, then theme files)', 'piratenkleider'),
                       2 => __('After (uses theme files first, then own css file)', 'piratenkleider'),
                       3 => __('Own css + colors/fonts (uses own css, do not load base css, but colors and fonts)', 'piratenkleider'),
 		      4 => __('Only (do not use any other css files)', 'piratenkleider'),
                   ),
-		  'parent'  => 'style', 
-              ),  
+		  'parent'  => 'style',
+              ),
               'aktiv-hamburger'  => array(
                   'type'    => 'bool',
                   'title'   => __( 'Hamburger Menu', 'piratenkleider' ),
                   'label'   => __( 'Activates hamburger menu on small screen sizes.', 'piratenkleider' ),
                   'default' => $defaultoptions['aktiv-hamburger'],
 		  'parent' => 'style',
-              ),	       
-	       
+              ),
+
             'background'  => array(
                   'type'    => 'section',
                   'title'   => __( 'Body background', 'piratenkleider' ),
@@ -2086,7 +2086,7 @@ $setoptions = array(
                   'label'   => __( 'Sets another background image for body; overwrites setting of CSS file.', 'piratenkleider' ),
                   'default' => '',
                   'parent'  => 'background',
-              ),   
+              ),
              'alt-body-background-orix' => array(
                   'type'    => 'select',
                   'title'   => __( 'Horizontal orientation', 'piratenkleider' ),
@@ -2098,7 +2098,7 @@ $setoptions = array(
                       'right' => __('right','piratenkleider'),
                       ),
                   'parent'  => 'background',
-              ),     
+              ),
               'alt-body-background-oriy' => array(
                   'type'    => 'select',
                   'title'   => __( 'Vertical orientation', 'piratenkleider' ),
@@ -2110,7 +2110,7 @@ $setoptions = array(
                       'bottom' => __('bottom','piratenkleider'),
                       ),
                   'parent'  => 'background',
-              ), 
+              ),
                'alt-body-background-repeat' => array(
                   'type'    => 'select',
                   'title'   => __( 'Repeat', 'piratenkleider' ),
@@ -2123,45 +2123,45 @@ $setoptions = array(
                       'no-repeat' => __('no-repeat','piratenkleider'),
                       ),
                   'parent'  => 'background',
-              ), 
+              ),
                'fonts'  => array(
                   'type'    => 'section',
                   'title'   => __( 'Fonts', 'piratenkleider' ),
-              ), 
+              ),
               'fonts-headers' => array(
                   'type'    => 'fontselect',
                   'title'   => __( 'Title fonts', 'piratenkleider' ),
                   'label'   => __( 'Changes font at titles.', 'piratenkleider' ),
                   'default' => $defaultoptions['fonts-headers'],
                   'liste'   => $default_fonts,
-		  'parent'  => 'fonts', 
-              ), 
+		  'parent'  => 'fonts',
+              ),
               'fonts-menuheaders' => array(
                   'type'    => 'fontselect',
                   'title'   => __( 'Menu fonts', 'piratenkleider' ),
                   'label'   => __( 'Changes font for menu items.', 'piratenkleider' ),
                   'default' => $defaultoptions['fonts-menuheaders'],
                   'liste'   => $default_fonts,
-		  	  'parent'  => 'fonts', 
-              ),                
+		  	  'parent'  => 'fonts',
+              ),
               'fonts-content' => array(
                   'type'    => 'fontselect',
                   'title'   => __( 'Text font', 'piratenkleider' ),
                   'label'   => __( 'Changes font for text content.', 'piratenkleider' ),
                   'default' => $defaultoptions['fonts-content'],
                   'liste'   => $default_fonts,
-		  	  'parent'  => 'fonts', 
-              ),               
-	     
+		  	  'parent'  => 'fonts',
+              ),
+
 	      'aktiv-linkicons' => array(
                   'type'    => 'bool',
                   'title'   => __( 'Activate link icons', 'piratenkleider' ),
                   'label'   => __( 'Displays link icons at known target URLs and document types.', 'piratenkleider' ),
-                  'default' => $defaultoptions['aktiv-linkicons'],         
-		  	  'parent'  => 'fonts', 
+                  'default' => $defaultoptions['aktiv-linkicons'],
+		  	  'parent'  => 'fonts',
               ),
 
-             
+
               'breadcrumb'  => array(
                   'type'    => 'section',
                   'title'   => __( 'Breadcrumb', 'piratenkleider' ),
@@ -2172,7 +2172,7 @@ $setoptions = array(
                   'label'   => __( 'Display breadcrumb', 'piratenkleider' ),
                   'default' => $defaultoptions['zeige_breadcrump'],
 		  'parent' => 'breadcrumb',
-              ),	       
+              ),
 	       'zeige_breadcrump_frontpages'  => array(
                   'type'    => 'bool',
                   'title'   => __( 'Breadcrumb on start page', 'piratenkleider' ),
@@ -2180,16 +2180,16 @@ $setoptions = array(
                   'default' => $defaultoptions['zeige_breadcrump_frontpages'],
 		   'parent' => 'breadcrumb',
               ),
-	     
-	       
 
-	       
-	       
+
+
+
+
 	      'miscdesign'  => array(
                   'type'    => 'section',
                   'title'   => __( 'Other options', 'piratenkleider' ),
               ),
-	       
+
 
 	       'src-teaser-thumbnail_default'=> array(
                   'type'    => 'image',
@@ -2199,7 +2199,7 @@ $setoptions = array(
 		  'maxwidth' =>  64,
 		  'maxheight'=>  64,
               ),
-	       
+
 	      'css-eigene-anweisungen' => array(
                   'type'    => 'textarea',
                   'title'   => __( 'CSS', 'piratenkleider' ),
@@ -2213,28 +2213,28 @@ $setoptions = array(
                   'label'   => __( 'Adds own HTML commands at the end of the page (after footer, just before &lt;/body&gt;&lt;/html&gt;).', 'piratenkleider' ),                  'default' => '',
 		  'parent' => 'miscdesign',
               ),
-	     
+
               'dimensions'  => array(
                   'type'    => 'section',
                   'title'   => __( 'Image Dimensions', 'piratenkleider' ),
-              ), 
-               
-               
-               
+              ),
+
+
+
                'teaser-thumbnail_width' => array(
                   'type'    => 'number',
                   'title'   => __( 'Teaser Thumb Width', 'piratenkleider' ),
                   'label'   => __( 'Width in px for thumbnail in teasers.', 'piratenkleider' ),
                   'default' => $defaultoptions['teaser-thumbnail_width'],
                    'parent'  => 'dimensions',
-                ), 
+                ),
                 'teaser-thumbnail_height' => array(
                   'type'    => 'number',
                   'title'   => __( 'Teaser Thumb Height', 'piratenkleider' ),
                   'label'   => __( 'Height in px for thumbnail in teasers.', 'piratenkleider' ),
                   'default' => $defaultoptions['teaser-thumbnail_height'],
                    'parent'  => 'dimensions',
-                ),              
+                ),
                 'teaser-thumbnail_crop'  => array(
                   'type'    => 'bool',
                   'title'   => __( 'Crop Images', 'piratenkleider' ),
@@ -2250,14 +2250,14 @@ $setoptions = array(
                   'label'   => __( 'Width in px for thumbnail in bookmarks.', 'piratenkleider' ),
                   'default' => $defaultoptions['linktipp-thumbnail_width'],
                    'parent'  => 'dimensions',
-                ), 
+                ),
                 'linktipp-thumbnail_height' => array(
                   'type'    => 'number',
                   'title'   => __( 'Bookmark Thumb Height', 'piratenkleider' ),
                   'label'   => __( 'Height in px for thumbnail in bookmarks.', 'piratenkleider' ),
                   'default' => $defaultoptions['linktipp-thumbnail_height'],
                    'parent'  => 'dimensions',
-                ),  
+                ),
                'linktipp-thumbnail_crop'  => array(
                   'type'    => 'bool',
                   'title'   => __( 'Crop Images', 'piratenkleider' ),
@@ -2265,7 +2265,7 @@ $setoptions = array(
                   'default' => $defaultoptions['linktipp-thumbnail_crop'],
 		  'parent' => 'dimensions',
               ),
-               
+
 
                 'person-thumbnail_width' => array(
                   'type'    => 'number',
@@ -2273,14 +2273,14 @@ $setoptions = array(
                   'label'   => __( 'Width in px for thumbnail in business cards', 'piratenkleider' ),
                   'default' => $defaultoptions['person-thumbnail_width'],
                    'parent'  => 'dimensions',
-                ), 
+                ),
                 'person-thumbnail_height' => array(
                   'type'    => 'number',
                   'title'   => __( 'Person Thumb Height', 'piratenkleider' ),
                   'label'   => __( 'Height in px for thumbnail in business cards', 'piratenkleider' ),
                   'default' => $defaultoptions['person-thumbnail_height'],
                    'parent'  => 'dimensions',
-                ),  
+                ),
                 'person-thumbnail_crop'  => array(
                   'type'    => 'bool',
                   'title'   => __( 'Crop Images', 'piratenkleider' ),
@@ -2288,21 +2288,21 @@ $setoptions = array(
                   'default' => $defaultoptions['person-thumbnail_crop'],
 		  'parent' => 'dimensions',
                 ),
- 
+
                 'sidebar-thumbnail_width' => array(
                   'type'    => 'number',
                   'title'   => __( 'Sidebar Thumb Width', 'piratenkleider' ),
                   'label'   => __( 'Width in px for sidebar thumbs', 'piratenkleider' ),
                   'default' => $defaultoptions['sidebar-thumbnail_width'],
                    'parent'  => 'dimensions',
-                ), 
+                ),
                 'sidebar-thumbnail_height' => array(
                   'type'    => 'number',
                   'title'   => __( 'Sidebar Thumb Height', 'piratenkleider' ),
                   'label'   => __( 'Height in px for sidebar thumbs', 'piratenkleider' ),
                   'default' => $defaultoptions['sidebar-thumbnail_height'],
                    'parent'  => 'dimensions',
-                ), 
+                ),
                 'sidebar-thumbnail_crop'  => array(
                   'type'    => 'bool',
                   'title'   => __( 'Crop Images', 'piratenkleider' ),
@@ -2310,14 +2310,14 @@ $setoptions = array(
                   'default' => $defaultoptions['sidebar-thumbnail_crop'],
 		  'parent' => 'dimensions',
         ),
-               
-               
-               
-               
+
+
+
+
           )
        ),
-       
-       
+
+
        'sonstiges'   => array(
            'tabtitle'   => __('Misc', 'piratenkleider'),
            'fields' => array(
@@ -2327,36 +2327,36 @@ $setoptions = array(
                   'label'   => __( 'Resets all options to default.', 'piratenkleider' ),
                   'default' => 0,
 		  'mark_option' => 1,
-              ),    
-                                                
+              ),
+
               'login_errors' => array(
                   'type'    => 'select',
                   'title'   => __( 'Error message on login', 'piratenkleider' ),
                   'label'   => __( 'Choose whether error messages will be displayed on login screen. The error message could make it easier to guess valid login names.', 'piratenkleider' ),
                   'liste'   => array(
-                      1 => __( 'Display error message', 'piratenkleider' ), 
+                      1 => __( 'Display error message', 'piratenkleider' ),
                       0 => __( 'Do not display anything', 'piratenkleider' )),
                   'default' => 1,
               ),
 
-             	       
-             
-              
-	     
+
+
+
+
               'yt-alternativeembed' => array(
                   'type'    => 'bool',
                   'title'   => __( 'YouTube', 'piratenkleider' ),
                   'label'   => __( 'Embedded YouTube-Links as an inline video-frame from youtube-nocookie.com', 'piratenkleider' ),
                   'default' => $defaultoptions['yt-alternativeembed'],
-              ),  
-	       
-	      
-	       
+              ),
+
+
+
               'anonymitaet'  => array(
                   'type'    => 'section',
-                  'title'   => __('Security', 'piratenkleider'),         
-              ),  
-               
+                  'title'   => __('Security', 'piratenkleider'),
+              ),
+
               'aktiv-autoren' => array(
                   'type'    => 'bool',
                   'title'   => __( 'Show author', 'piratenkleider' ),
@@ -2385,42 +2385,42 @@ $setoptions = array(
                   'label'   => __( 'Activates use of services, show author avatars. Notice: This will allow avatar services to track users on this website.', 'piratenkleider' ),
                   'default' => $defaultoptions['aktiv-avatar'],
                   'parent'  => 'anonymitaet',
-              ),               
+              ),
              'feed-overwriteauthorstring' => array(
                   'type'    => 'text',
                   'title'   => __( 'Feed author', 'piratenkleider' ),
                   'label'   => __( 'Sets author name for rss feeds. This overwrites authorname from backend.', 'piratenkleider' ),
                   'parent'  => 'anonymitaet',
-              ),  
-               
+              ),
+
               'meta'  => array(
                   'type'    => 'section',
-                  'title'   => __('Meta fields', 'piratenkleider'),                   
-              ),               
+                  'title'   => __('Meta fields', 'piratenkleider'),
+              ),
                'meta-author' => array(
                   'type'    => 'text',
                   'title'   => __( 'Author', 'piratenkleider' ),
                   'label'   => __( 'Optional authorname for website on every page.', 'piratenkleider' ),
                   'parent'  => 'meta',
-              ),  
+              ),
                 'meta-description' => array(
                   'type'    => 'text',
                   'title'   => __( 'Description', 'piratenkleider' ),
                   'label'   => __( 'Optional description of website on every page.', 'piratenkleider' ),
                   'parent'  => 'meta',
-              ),  
+              ),
                'meta-keywords' => array(
                   'type'    => 'text',
                   'title'   => __( 'Keywords', 'piratenkleider' ),
                   'label'   => __( 'Sets a list of keywords on every page.', 'piratenkleider' ),
-                  'parent'  => 'meta',                    
-              ),   
+                  'parent'  => 'meta',
+              ),
 	       'meta-verify-v1' => array(
                   'type'    => 'text',
                   'title'   => __( 'Google Verify', 'piratenkleider' ),
                   'label'   => __( 'Optional text field to enter a code for Google Verify.', 'piratenkleider' ),
                   'parent'  => 'meta',
-              ),  
+              ),
 
 	       'aktiv-autokeywords'  => array(
                   'type'    => 'bool',
@@ -2428,29 +2428,29 @@ $setoptions = array(
                   'label'   => __( 'Generates keywords using known tags.', 'piratenkleider'),
                   'default' => $defaultoptions['aktiv-autokeywords'],
                   'parent'  => 'meta',
-              ),           
+              ),
           	       'linktipps'  => array(
                   'type'    => 'section',
-                  'title'   => __('Bookmarks', 'piratenkleider'),                   
-              ),            
+                  'title'   => __('Bookmarks', 'piratenkleider'),
+              ),
 
-               
+
               'linktipps-titlepos'  => array(
                   'type'    => 'select',
                   'title'   => __( 'Title', 'piratenkleider' ),
-                  'label'   => __( 'Sets the position of bookmark title', 'piratenkleider'),		   
+                  'label'   => __( 'Sets the position of bookmark title', 'piratenkleider'),
                   'default' => $defaultoptions['linktipps-titlepos'],
-                  'liste'   => array( 
-                        0   => __("On top of text or/and image", 'piratenkleider'), 
+                  'liste'   => array(
+                        0   => __("On top of text or/and image", 'piratenkleider'),
                         1   => __("Below of text or/and image", 'piratenkleider')),
                   'parent'  => 'linktipps',
               ),
                 'linktipps-subtitlepos'  => array(
                   'type'    => 'select',
                   'title'   => __( 'Subtitle', 'piratenkleider' ),
-                  'label'   => __( 'Sets the position of subtitle', 'piratenkleider'),		   
+                  'label'   => __( 'Sets the position of subtitle', 'piratenkleider'),
                   'default' => $defaultoptions['linktipps-subtitlepos'],
-                  'liste'   => array( 
+                  'liste'   => array(
                        0 => __("Top", 'piratenkleider'),
                         1 => __("Bottom", 'piratenkleider')),
                   'parent'  => 'linktipps',
@@ -2458,27 +2458,27 @@ $setoptions = array(
               'linktipps-linkpos'  => array(
                   'type'    => 'select',
                   'title'   => __( 'Link', 'piratenkleider' ),
-                  'label'   => __( 'Wether to set the target link.', 'piratenkleider'),		   
+                  'label'   => __( 'Whether to set the target link.', 'piratenkleider'),
                   'default' => $defaultoptions['linktipps-linkpos'],
-                  'liste'   => array( 
+                  'liste'   => array(
                       0 => __( 'Link on title', 'piratenkleider' ),
                       1 => __( 'Link on text and/or image', 'piratenkleider' ),
                       2 => __( 'Show URL below of text and/or image', 'piratenkleider' ),
                       3 => __( 'Link on title and on URL below of text and/or image', 'piratenkleider' )),
                   'parent'  => 'linktipps',
               ),
-             
-	      
-               
+
+
+
           ),
-	),          
+	),
        'opengraph' => array(
            'tabtitle'   => __('OpenGraph / Schema', 'piratenkleider'),
            'fields' => array(
                 'meta'  => array(
                   'type'    => 'section',
-                  'title'   => __('General Meta', 'piratenkleider'),                   
-              ),      
+                  'title'   => __('General Meta', 'piratenkleider'),
+              ),
               'meta-itemtype-aboutpage' => array(
                   'type'    => 'text',
                   'title'   => __( 'Itemtype AboutPage', 'piratenkleider' ),
@@ -2527,166 +2527,166 @@ $setoptions = array(
                   'label'   => __( 'Enter a custom description of your organization. If left empty blog description will be used.', 'piratenkleider' ),
                   'parent'  => 'meta',
               ),
-               
+
             'og'  => array(
                   'type'    => 'section',
-                  'title'   => __('Open Graph', 'piratenkleider'),                   
-              ),          
+                  'title'   => __('Open Graph', 'piratenkleider'),
+              ),
              'open_graph-active'   => array(
                   'type'    => 'bool',
                   'title'   => __( 'Activate Open Graph', 'piratenkleider' ),
                   'label'   => __( 'Activates Open Graph Meta Tags from Piratenkleider', 'piratenkleider' ),
                   'default' => $defaultoptions['open_graph-active'],
                   'parent'  => 'og',
-              ),    
+              ),
             'open_graph-twitterhandle'   => array(
                   'type'    => 'text',
                   'title'   => __( 'Twitter Handle', 'piratenkleider' ),
                   'label'   => __( 'Twitter Nick without @ for Twitter Cards', 'piratenkleider' ),
                   'parent'  => 'og',
-              ), 
-               
+              ),
+
            )
        ),
        'crew'   => array(
-           'tabtitle'   => __( 'Contact informations', 'piratenkleider' ),
+           'tabtitle'   => __( 'Contact information', 'piratenkleider' ),
            'fields' => array(
 	        'impressum'  => array(
                   'type'    => 'section',
-                  'title'   => __('Imprint', 'piratenkleider'),                   
-		),               
+                  'title'   => __('Imprint', 'piratenkleider'),
+		),
                'impressumperson' => array(
                   'type'    => 'text',
                   'title'   => __( 'Responsible person', 'piratenkleider' ),
                   'label'   => __( 'Name of responsible person for website', 'piratenkleider' ),
 		   'default'	=> '',
                   'parent'  => 'impressum',
-		),  
+		),
                 'impressumdienstanbieter' => array(
                   'type'    => 'text',
                   'title'   => __( 'Service provider', 'piratenkleider' ),
                   'label'   => __( 'Public contact name for website owner.', 'piratenkleider' ),
-                  'parent'  => 'impressum',		    
-		), 
+                  'parent'  => 'impressum',
+		),
 	       'kontaktemail' => array(
                   'type'    => 'email',
                   'title'   => __( 'Contact email', 'piratenkleider' ),
                   'label'   => __( 'Public email address for contacting website owner.', 'piratenkleider' ),
-                  'parent'  => 'impressum',		    
-		), 
+                  'parent'  => 'impressum',
+		),
                'kontakttelefon' => array(
                   'type'    => 'text',
                   'title'   => __( 'Phone', 'piratenkleider' ),
                   'label'   => __( 'Phone number.', 'piratenkleider' ),
 		  'default'	=> '',
                   'parent'  => 'impressum',
-		), 
+		),
                'kontaktfax' => array(
                   'type'    => 'text',
                   'title'   => __( 'Fax', 'piratenkleider' ),
                   'label'   => __( 'Fax number', 'piratenkleider' ),
 		  'default'	=> '',
                   'parent'  => 'impressum',
-		), 
-       
+		),
+
 	       'lizenzen' => array(
                   'type'    => 'textarea',
-                  'title'   => __( 'Copyright informations', 'piratenkleider' ),
-                  'label'   => __( 'Addition field for copyright informations.', 'piratenkleider' ),
-                  'parent'  => 'impressum',		    
-		), 
-	       
+                  'title'   => __( 'Copyright information', 'piratenkleider' ),
+                  'label'   => __( 'Addition field for copyright information.', 'piratenkleider' ),
+                  'parent'  => 'impressum',
+		),
+
 	      'postanschrift'  => array(
                   'type'    => 'section',
-                  'title'   => __('Postal address', 'piratenkleider'),                   
-		),  
-      
+                  'title'   => __('Postal address', 'piratenkleider'),
+		),
+
                'posttitel' => array(
                   'type'    => 'text',
                   'title'   => __( 'Name', 'piratenkleider' ),
                   'label'   => __( 'First line for postal contact form. E.g. Name of party.', 'piratenkleider' ),
 		  'default'	=> '',
                   'parent'  => 'postanschrift',
-		),  
+		),
                 'postperson' => array(
                   'type'    => 'text',
                   'title'   => __( 'Additional contact line', 'piratenkleider' ),
                   'label'   => __( 'Second line for postal contact form. E.g. to address someone special.', 'piratenkleider' ),
 		  'default'	=> '',
                   'parent'  => 'postanschrift',
-		 ),   
+		 ),
 		'poststrasse' => array(
                   'type'    => 'text',
                   'title'   => __( 'Street', 'piratenkleider' ),
                   'label'   => __( 'Street and house number', 'piratenkleider' ),
 		  'default'	=> '',
                   'parent'  => 'postanschrift',
-		), 
+		),
 		'poststadt' => array(
                   'type'    => 'text',
                   'title'   => __( 'Postal code and town', 'piratenkleider' ),
                   'label'   => __( 'Sets postal code and town for contact information.', 'piratenkleider' ),
 		  'default'	=> '',
                   'parent'  => 'postanschrift',
-		), 
-                
+		),
+
 	       'ladung'  => array(
                   'type'    => 'section',
-                  'title'   => __('Postal contact address for matters of law', 'piratenkleider'),                   
-		),               
+                  'title'   => __('Postal contact address for matters of law', 'piratenkleider'),
+		),
                'ladungtitel' => array(
                   'type'    => 'text',
                   'title'   => __( 'Name', 'piratenkleider' ),
                   'label'   => __( 'First line for postal contact form. E.g. Name of party.', 'piratenkleider' ),
 		  'default'	=> '',
                   'parent'  => 'ladung',
-		),  
+		),
                 'ladungperson' => array(
                   'type'    => 'text',
                   'title'   => __( 'Additional name info', 'piratenkleider' ),
                   'label'   => __( 'Second line for postal contact form. E.g. to address someone special.', 'piratenkleider' ),
 		  'default'	=> '',
                   'parent'  => 'ladung',
-		 ),   
+		 ),
 		'ladungstrasse' => array(
                   'type'    => 'text',
                   'title'   => __( 'Street', 'piratenkleider' ),
                   'label'   => __( 'Street and house number.', 'piratenkleider' ),
 		  'default'	=> '',
                   'parent'  => 'ladung',
-		), 
+		),
 		'ladungstadt' => array(
                   'type'    => 'text',
                   'title'   => __( 'Postal code and town', 'piratenkleider' ),
                   'label'   => __( 'Sets postal code and town for contact information.', 'piratenkleider' ),
 		  'default'	=> '',
                   'parent'  => 'ladung',
-		), 
+		),
 
-	       
-	       
+
+
 	       'dsb'  => array(
                   'type'    => 'section',
-                  'title'   => __('Privacy policy', 'piratenkleider'),                   
-		),               
+                  'title'   => __('Privacy policy', 'piratenkleider'),
+		),
                'dsbperson' => array(
                   'type'    => 'text',
                   'title'   => __( 'Name', 'piratenkleider' ),
                   'label'   => __( 'Sets a name for someone responsible for questions concerning data protection.', 'piratenkleider' ),
 		  'default'	=> '',
                   'parent'  => 'dsb',
-		),  
+		),
                 'dsbemail' => array(
                   'type'    => 'email',
                   'title'   => __( 'Email address', 'piratenkleider' ),
                   'label'   => __( 'Sets an email address.', 'piratenkleider' ),
 		  'default'	=> '',
                   'parent'  => 'dsb',
-		 ),   
-		
+		 ),
 
-	  
-	),   
+
+
+	),
       ),
    )
 );

@@ -1,16 +1,16 @@
-<?php get_header(); 
+<?php get_header();
   global $options;
  ?>
 
 <div class="section content" id="main-content">
   <div class="row">
     <div class="content-primary">
-	
+
 
 	<?php
-	    $image_url = '';	  
+	    $image_url = '';
 	    $attribs = array("credits" => $options['img-meta-credits'] );
-	    if (($options['aktiv-platzhalterbilder-indexseiten']==1) && (isset($options['src-default-symbolbild-404']))) {  
+	    if (($options['aktiv-platzhalterbilder-indexseiten']==1) && (isset($options['src-default-symbolbild-404']))) {
 		     if (isset($options['src-default-symbolbild-404_id']) && ($options['src-default-symbolbild-404_id']>0)) {
 			$image_url_data = wp_get_attachment_image_src( $options['src-default-symbolbild-404_id'], 'full');
 			$image_url = $image_url_data[0];
@@ -19,38 +19,38 @@
 			$image_url = $options['src-default-symbolbild-404'];
 		    }
 	    }
-	      
-	    
-	    if (isset($image_url) && (strlen($image_url)>4)) { 
+
+
+	    if (isset($image_url) && (strlen($image_url)>4)) {
 		if ($options['indexseitenbild-size']==1) {
 		    echo '<div class="content-header-big">';
 		} else {
 		    echo '<div class="content-header">';
 		}
-		?>    		    		    		        
+		?>
 		   <h1 class="post-title"><span><?php _e("Page not found",'piratenkleider'); ?></span></h1>
 		   <div class="symbolbild"><img src="<?php echo piratenkleider_make_link_relative($image_url); ?>" alt="">
 		       <?php if (isset($attribs["credits"]) && (strlen($attribs["credits"])>1)) {
-                           echo '<div class="caption">'.$attribs["credits"].'</div>';  
+                           echo '<div class="caption">'.$attribs["credits"].'</div>';
                         }  else { ?>
-		    <div class="caption">  
-		     <p style="font-size: 2em;" class="cifont">404</p>                  
-		     </div> 	
+		    <div class="caption">
+		     <p style="font-size: 2em;" class="cifont">404</p>
+		     </div>
 			<?php } ?>
 		   </div>
-		</div>  	
+		</div>
 	    <?php } ?>
-	
+
       <div class="skin">
-	  
+
 	  <?php if (!(isset($image_url) && (strlen($image_url)>4))) { ?>
 	    <h1 class="post-title"><span><?php _e("Page not found",'piratenkleider'); ?></span></h1>
 	<?php } ?>
-	  
+
          <p>
             <?php _e("No matching pages or entries found. Please try to search with another term.", 'piratenkleider'); ?>
-         </p>              
-	 
+         </p>
+
          <?php get_search_form(); ?>
       </div>
     </div>
