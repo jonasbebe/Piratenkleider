@@ -1,16 +1,16 @@
-<?php 
+<?php
     global $options;
     global $defaultoptions;
- ?>   
+ ?>
 
-</div> <!-- #content-body --> 
+</div> <!-- #content-body -->
 <div class="section footer">
     <div class="row">
         <?php get_sidebar( 'footer' ); ?>
-        <?php get_sidebar( 'footer-secondary' ); ?>  
+        <?php get_sidebar( 'footer-secondary' ); ?>
     </div>
     <nav role="navigation">
-        <ul class="nav skiplinks">		
+        <ul class="nav skiplinks">
 		<li><a class="p3-skip" id="skiplink-top" href="#top"><?php _e( 'Back to top.', 'piratenkleider' ); ?></a></li>
 		<li><a class="p3-skip" id="skiplink-content-bottom" href="#main-content"><?php _e( 'Back to start of content.', 'piratenkleider' ); ?></a></li>
 		<?php if ( $options['aktiv-suche'] == "1" ){ ?>
@@ -20,28 +20,28 @@
     </nav>
   </div>
 
-<?php 
-    wp_footer();     
-   
-      $slideshowSpeed = $options['slider-slideshowSpeed'];    
-      $animationDuration = $options['slider-animationDuration'];    
-      $slideDirection = $options['slider-Direction']; 
-      $animationType = $options['slider-animationType']; 
+<?php
+    wp_footer();
+
+      $slideshowSpeed = $options['slider-slideshowSpeed'];
+      $animationDuration = $options['slider-animationDuration'];
+      $slideDirection = $options['slider-Direction'];
+      $animationType = $options['slider-animationType'];
 
        if  ( (($options['slider-aktiv']==1) && (is_home() || is_front_page()))
           || (is_category() && ($options['category-teaser']==1))
-          || ( get_page_template_slug( ) )     
+          || ( get_page_template_slug( ) )
 	  || ($options['slider-defaultwerbeplakate']==1)  ) {
         if ($slideshowSpeed <1000) {$slideshowSpeed=8000;}
         if ($animationDuration <100) {$animationDuration=600;}
         if (! isset($slideDirection)) $slideDirection = 'horizontal';
-        if (! isset($animationType)) $animationType = 'slide';        
+        if (! isset($animationType)) $animationType = 'slide';
         ?>
-       <script src="<?php echo $defaultoptions['src-flexslider'] ?>"></script>      
+       <script src="<?php echo esc_url( $defaultoptions['src-flexslider'] ) ?>"></script>
        <script type="text/javascript">
         /* <![CDATA[ */
 	jQuery(document).ready(function($) {
-         <?php if ($options['slider-aktiv']==1) { ?>        
+         <?php if ($options['slider-aktiv']==1) { ?>
 	 $('.flexslider').flexslider({
 	    slideshowSpeed: <?php echo $slideshowSpeed ?>,
 	    animationSpeed: <?php echo $animationDuration ?>,
@@ -52,15 +52,15 @@
 	    multipleKeyboard: true,
 	    touch: true,
             directionNav: false,
-            controlNav: true,     
+            controlNav: true,
             pauseText: "<?php _e('Stop','piratenkleider'); ?>",
-            playText: "<?php _e('Start','piratenkleider'); ?>",            
-           });	   
-         <?php } 
+            playText: "<?php _e('Start','piratenkleider'); ?>",
+           });
+         <?php }
          if ($options['slider-defaultwerbeplakate']==1) { ?>
-                 
+
           var breite = $(window).width();
-          if (breite > 600) {        
+          if (breite > 600) {
              $('.slidersidebar').flexslider({
                 slideshowSpeed: <?php echo $slideshowSpeed ?>,
                 animationSpeed: <?php echo $animationDuration ?>,
@@ -69,7 +69,7 @@
                 keyboard: true,
                 multipleKeyboard: true,
                 touch: true,
-                smoothHeight: true, 
+                smoothHeight: true,
                 directionNav: true,
                 controlNav: false,
                 nextText: "<?php _e('Next','piratenkleider'); ?>",
@@ -79,15 +79,15 @@
                });
            }
 	   <?php } ?>
-	});        
-	
+	});
+
     /* ]]> */
-      </script> 
-    <?php }  
-    
+      </script>
+    <?php }
+
    if (isset($options['html-eigene-anweisungen'])
         && strlen(trim($options['html-eigene-anweisungen'])) > 0) {
-       echo $options['html-eigene-anweisungen'];     
-   }  ?>       
+       echo $options['html-eigene-anweisungen'];
+   }  ?>
 </body>
 </html>

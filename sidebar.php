@@ -1,41 +1,41 @@
-<?php           
+<?php
   global $defaultoptions;
   global $options;
- 
-     
+
+
   if ( is_active_sidebar( 'sidebar-widget-area' ) )  {
-            dynamic_sidebar( 'sidebar-widget-area' );     
-   }    
-   
-   
-   if ( $options['slider-defaultwerbeplakate'] == "1" ) {     
-       if ( ((isset($options['plakate-src']) && (is_array($options['plakate-src'])))) || 
+            dynamic_sidebar( 'sidebar-widget-area' );
+   }
+
+
+   if ( $options['slider-defaultwerbeplakate'] == "1" ) {
+       if ( ((isset($options['plakate-src']) && (is_array($options['plakate-src'])))) ||
             ((isset($options['plakate-altadressen'])) && (strlen(trim($options['plakate-altadressen']))>5))
            ) {
-            echo '<div class="slidersidebar fs2 no-js" style="width: '.$defaultoptions['plakate-width'].'px;">';         
-            echo '<ul class="slides">';                               
-                   if (is_array($options['plakate-src'])) {              
-                     foreach ($options['plakate-src'] as $current) {                        
-                         echo '<li class="slide">';                         
-                                                
+            echo '<div class="slidersidebar fs2 no-js" style="width: '.$defaultoptions['plakate-width'].'px;">';
+            echo '<ul class="slides">';
+                   if (is_array($options['plakate-src'])) {
+                     foreach ($options['plakate-src'] as $current) {
+                         echo '<li class="slide">';
+
 			 if ((isset($options['plakate-url'])) && (strlen(trim($options['plakate-url']))>2)) {
-			     echo '<a href="'.$options['plakate-url'].'">';
-			     echo '<img src="'.$current.'" style="max-width: '.$defaultoptions['plakate-width'].'px;" alt="';                                                      
-			     if ((isset($options['plakate-title'])) && (strlen(trim($options['plakate-title']))>2)) {   
-				   echo $options['plakate-title'];     
+			     echo '<a href="'.esc_url( $options['plakate-url'] ).'">';
+			     echo '<img src="'.$current.'" style="max-width: '.intval( $defaultoptions['plakate-width'] ).'px;" alt="';
+			     if ((isset($options['plakate-title'])) && (strlen(trim($options['plakate-title']))>2)) {
+			     echo esc_attr( $options['plakate-title'] );
 			     }
-			     echo '">';                                                      			     
-			     echo '</a>';   
+			     echo '">';
+			     echo '</a>';
 			 } else {
-			      echo '<img src="'.$current.'" style="max-width: '.$defaultoptions['plakate-width'].'px;" alt="">';                                                      
+			      echo '<img src="'.$current.'" style="max-width: '.$defaultoptions['plakate-width'].'px;" alt="">';
 			 }
-			     
-			                           
-                         echo '</li>';                        
-                     }                 
-                  } 
-               
-                  if ((isset($options['plakate-altadressen'])) && (strlen(trim($options['plakate-altadressen']))>2)) {                  
+
+
+                         echo '</li>';
+                     }
+                  }
+
+                  if ((isset($options['plakate-altadressen'])) && (strlen(trim($options['plakate-altadressen']))>2)) {
                         $alturls = preg_split("/[\n\r]+/", $options['plakate-altadressen']);
                         if (is_array( $alturls )) {
                             foreach ( $alturls  as $current) {
@@ -43,35 +43,34 @@
                                 $thisurl = esc_url( $parts[0] ?? '' );
                                 $thistitel = wp_filter_nohtml_kses($parts[1] ?? '');
                                 $thisweb = esc_url ($parts[2] ?? '');
-                                
-                                if ($thisurl <> '') {                                
-                                    echo '<li class="slide">';      
+
+                                if ($thisurl <> '') {
+                                    echo '<li class="slide">';
 				    if ((isset($thisweb)) && (strlen(trim($thisweb))>2)) {
                                             echo '<a href="'.$thisweb.'">';
-                                    }					
+                                    }
                                     echo '<img src="'.$thisurl.'" style="max-width: '.$defaultoptions['plakate-width'].'px;" alt="';
-				     if ((isset($thistitel)) && (strlen(trim($thistitel))>2)) {  
-					 echo wp_filter_nohtml_kses($thistitel);     
+				     if ((isset($thistitel)) && (strlen(trim($thistitel))>2)) {
+					 echo wp_filter_nohtml_kses($thistitel);
 				     }
-				    echo '">';                                                      
+				    echo '">';
 
 				    if ((isset($thisweb)) && (strlen(trim($thisweb))>2)) {
                                             echo '</a>';
                                      }
                                     echo '</li>';
-                            
-                                 }            
+
+                                 }
                               }
                         }
-                  }     
-                ?>                   
+                  }
+                ?>
             </ul>
         </div>
 <?php }
    }
    if ( is_active_sidebar( 'sidebar-widget-area-afterplakate' ) )  {
-          dynamic_sidebar( 'sidebar-widget-area-afterplakate' );     
-   }    
- 
-        
-   
+          dynamic_sidebar( 'sidebar-widget-area-afterplakate' );
+   }
+
+

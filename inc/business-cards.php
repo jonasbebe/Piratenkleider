@@ -1,6 +1,6 @@
 <?php
 
-/* 
+/*
  * Defines visiting cards / personal info pages using custom post types and meta boxes
  */
 
@@ -10,7 +10,7 @@ function piratenkleider_person_post_type() {
 	$labels = array(
 		'name'                => _x( 'Business Card', 'Personal information', 'piratenkleider' ),
 		'singular_name'       => _x( 'Business Card', 'Personal information', 'piratenkleider' ),
-		'menu_name'           => __( 'Business Card', 'piratenkleider' ),            
+		'menu_name'           => __( 'Business Card', 'piratenkleider' ),
 	);
 	$args = array(
 		'label'               => __( 'Business Card', 'piratenkleider' ),
@@ -60,14 +60,14 @@ function piratenkleider_person_metabox_content( $post ) {
     global $defaultoptions;
     global $post;
     $academictitle = array(
-	__("Prof.", 'piratenkleider'), 
+	__("Prof.", 'piratenkleider'),
 	__("Doc.", 'piratenkleider'),
         __("PD", 'piratenkleider')
     );
 	wp_nonce_field( plugin_basename( __FILE__ ), 'person_metabox_content_nonce' );
 	?>
 
-        
+
         <p>
 		<label for="person_first_name"><?php _e( "Pre name", 'piratenkleider' ); ?>:</label>
 		<br />
@@ -87,23 +87,23 @@ function piratenkleider_person_metabox_content( $post ) {
 		    <option value=""></option>
 		<?php
 		    $current = esc_attr( get_post_meta( $post->ID, 'person_academic', true ) );
-			 foreach($academictitle as $i) {   
+			 foreach($academictitle as $i) {
                                         echo "\t\t\t\t";
                                         echo '<option value="'.$i.'"';
                                         if ( $i == $current ) {
                                             echo ' selected="selected"';
-                                        }                                                                                                                                                                
+                                        }
                                         echo '>';
 					echo $i;
-                                        echo '</option>';                                                                                                                                                              
-                                        echo "\n";                                            
-                                    }  
+                                        echo '</option>';
+                                        echo "\n";
+                                    }
 		    ?>
-		</select> 
+		</select>
 
-	</p>	
-        
-        
+	</p>
+
+
         <p>
 		<label for="person_shortdesc"><?php _e( "Short description", 'piratenkleider' ); ?>:</label>
 		<br />
@@ -113,36 +113,36 @@ function piratenkleider_person_metabox_content( $post ) {
 	<p>
 	    <label for="person_bild"><?php _e( "Personal image", 'piratenkleider' ); ?>:</label>
 	    <br />
-	     
-	    
+
+
 		<?php
 		 $person_bildid = get_post_meta( $post->ID, 'person_bildid', true );
 		 $person_bild = get_post_meta( $post->ID, 'person_bild', true );
-		
+
 		 if (isset($person_bildid) && ($person_bildid>0)) {
 		     $image_attributes = wp_get_attachment_image_src( $person_bildid, 'person-thumb' );
 		     if (is_array($image_attributes)) {
 			echo '<img id="person_bild-show" src="'.$image_attributes[0].'" width="'.$image_attributes[1].'" height="'.$image_attributes[2].'">';
 			$person_bild = $image_attributes[0];
 		     }
-		     
+
 		 } elseif (filter_var($person_bild, FILTER_VALIDATE_URL)) {
 			echo '<img id="person_bild-show" src="'.$person_bild.'" alt="" style="width: '.$defaultoptions['person-thumbnail_width'].'px; height: auto;">';
 		 } else {
-			echo '<img id="person_bild-show" src="'.$defaultoptions['src-person_bild_default'].'" alt="" style="width: '.$defaultoptions['person-thumbnail_width'].'px; height: auto;">';			
+			echo '<img id="person_bild-show" src="'.$defaultoptions['src-person_bild_default'].'" alt="" style="width: '.$defaultoptions['person-thumbnail_width'].'px; height: auto;">';
 		 }
-		 echo '<br /><span class="custom_default_image" style="display:none">'.$defaultoptions['src-person_bild_default'].'</span>';  
+		 echo '<br /><span class="custom_default_image" style="display:none">'.$defaultoptions['src-person_bild_default'].'</span>';
 		?>
-	     <input type="text" name="person_bild" size="50" id="person_bild" 
+	     <input type="text" name="person_bild" size="50" id="person_bild"
 		    value="<?php echo $person_bild; ?>" />
-	     <input type="hidden" name="person_bildid" id="person_bildid" 
-		    value="<?php echo $person_bildid; ?>" />	    
-	     
-	     
+	     <input type="hidden" name="person_bildid" id="person_bildid"
+		    value="<?php echo $person_bildid; ?>" />
+
+
 	     <input type="button" id="person_bild-button" class="button" value="<?php _e( "Select or upload image", 'piratenkleider' ); ?>" />
-	    <small> <a href="#" class="custom_clear_image_button"><?php _e("Remove image",'piratenkleider'); ?></a></small> 
+	    <small> <a href="#" class="custom_clear_image_button"><?php _e("Remove image",'piratenkleider'); ?></a></small>
 	</p>
-	
+
 	<p>
 		<label for="person_email"><?php _e( "Email", 'piratenkleider' ); ?>:</label>
 		<br />
@@ -161,14 +161,14 @@ function piratenkleider_person_metabox_content( $post ) {
 		<input  type="text" name="person_url"
 			id="person_url" value="<?php echo esc_attr( get_post_meta( $post->ID, 'person_url', true ) ); ?>" size="30" />
 	</p>
-	
+
 	<p>
 		<label for="person_wiki"><?php _e( "Wiki Page (Username)", 'piratenkleider' ); ?>:</label>
 		<br />
 		<input  type="text" name="person_wiki"
 			id="person_wiki" value="<?php echo esc_attr( get_post_meta( $post->ID, 'person_wiki', true ) ); ?>" size="10" />
 	</p>
-	
+
 	<p>
 		<label for="person_twitter"><?php _e( "Twitter (Accountname)", 'piratenkleider' ); ?>:</label>
 		<br />
@@ -210,7 +210,7 @@ function piratenkleider_person_metabox_content( $post ) {
 		<input  type="text" name="person_newsfeed"
 			id="person_newsfeed" value="<?php echo esc_attr( get_post_meta( $post->ID, 'person_newsfeed', true ) ); ?>" size="30" />
 	</p>
-      
+
 
 	<?php
 
@@ -256,25 +256,25 @@ function piratenkleider_person_metabox_save( $post_id ) {
 	if ((isset( $_POST['person_url'] ) && (filter_var($_POST['person_url'], FILTER_VALIDATE_URL)))) {
 		$url = $_POST['person_url'];
 	} else {
-            if ((isset( $_POST['person_url'])) && (preg_match("/^www/i",$_POST['person_url']))) { 
+            if ((isset( $_POST['person_url'])) && (preg_match("/^www/i",$_POST['person_url']))) {
                $tryurl = 'http://'.$_POST['person_url'];
                if (filter_var($tryurl, FILTER_VALIDATE_URL)) {
                    $url = $tryurl;
                }
             }
-	}	
+	}
 	$oldurl = get_post_meta( $post_id, 'person_url', true );
 	if ( $url && '' == $oldurl )
 		add_post_meta( $post_id, 'person_url', $url, true );
 	elseif ( $url && $url != $oldurl )
 		update_post_meta( $post_id, 'person_url', $url );
 	elseif ( '' == $url && $oldurl )
-		delete_post_meta( $post_id, 'person_url', $oldurl );		     
-			     
-	
+		delete_post_meta( $post_id, 'person_url', $oldurl );
+
+
         $newid = ( isset( $_POST['person_email'] ) ?  $_POST['person_email']  : '' );
         if ((isset($newid)) && (filter_var($newid, FILTER_VALIDATE_EMAIL))) {
-           /* URL ok */ 
+           /* URL ok */
         } else {
             $newid = '';
         }
@@ -286,10 +286,10 @@ function piratenkleider_person_metabox_save( $post_id ) {
 		update_post_meta( $post_id, 'person_email', $newid );
 	elseif ( '' == $newid && $oldid )
 		delete_post_meta( $post_id, 'person_email', $oldid );
-	
+
         $newid = ( isset( $_POST['person_facebook'] ) ? $_POST['person_facebook']  : '' );
         if ((isset($newid)) && (filter_var($newid, FILTER_VALIDATE_URL))) {
-           /* URL ok */ 
+           /* URL ok */
         } else {
             $newid = '';
         }
@@ -301,10 +301,10 @@ function piratenkleider_person_metabox_save( $post_id ) {
 		update_post_meta( $post_id, 'person_facebook', $newid );
 	elseif ( '' == $newid && $oldid )
 		delete_post_meta( $post_id, 'person_facebook', $oldid );
-        
+
  	$newid = ( isset( $_POST['person_google'] ) ?   $_POST['person_google']  : '' );
         if ((isset($newid)) && (filter_var($newid, FILTER_VALIDATE_URL))) {
-           /* URL ok */ 
+           /* URL ok */
         } else {
             $newid = '';
         }
@@ -316,10 +316,10 @@ function piratenkleider_person_metabox_save( $post_id ) {
 		update_post_meta( $post_id, 'person_google', $newid );
 	elseif ( '' == $newid && $oldid )
 		delete_post_meta( $post_id, 'person_google', $oldid );
-  
+
         $newid = ( isset( $_POST['person_friendica'] ) ?   $_POST['person_friendica']  : '' );
         if ((isset($newid)) && (filter_var($newid, FILTER_VALIDATE_URL))) {
-           /* URL ok */ 
+           /* URL ok */
         } else {
             $newid = '';
         }
@@ -331,11 +331,11 @@ function piratenkleider_person_metabox_save( $post_id ) {
 		update_post_meta( $post_id, 'person_friendica', $newid );
 	elseif ( '' == $newid && $oldid )
 		delete_post_meta( $post_id, 'person_friendica', $oldid );
-        
+
 
         $newid = ( isset( $_POST['person_instagram'] ) ?   $_POST['person_instagram']  : '' );
         if ((isset($newid)) && (filter_var($newid, FILTER_VALIDATE_URL))) {
-           /* URL ok */ 
+           /* URL ok */
         } else {
             $newid = '';
         }
@@ -347,12 +347,12 @@ function piratenkleider_person_metabox_save( $post_id ) {
 		update_post_meta( $post_id, 'person_instagram', $newid );
 	elseif ( '' == $newid && $oldid )
 		delete_post_meta( $post_id, 'person_instagram', $oldid );
-        
-        
-       
+
+
+
  	$newid = ( isset( $_POST['person_newsfeed'] ) ?   $_POST['person_newsfeed'] : '' );
         if ((isset($newid)) && (filter_var($newid, FILTER_VALIDATE_URL))) {
-           /* URL ok */ 
+           /* URL ok */
         } else {
             $newid = '';
         }
@@ -363,11 +363,11 @@ function piratenkleider_person_metabox_save( $post_id ) {
 	elseif ( $newid && $newid != $oldid )
 		update_post_meta( $post_id, 'person_newsfeed', $newid );
 	elseif ( '' == $newid && $oldid )
-		delete_post_meta( $post_id, 'person_newsfeed', $oldid );	
-	       
-        
-        
-        $newid = ( isset( $_POST['person_wiki'] ) ?   $_POST['person_wiki'] : '' );       
+		delete_post_meta( $post_id, 'person_newsfeed', $oldid );
+
+
+
+        $newid = ( isset( $_POST['person_wiki'] ) ?   $_POST['person_wiki'] : '' );
 	$oldid = get_post_meta( $post_id, 'person_wiki', true );
 
 	if ( $newid && '' == $oldid )
@@ -375,8 +375,8 @@ function piratenkleider_person_metabox_save( $post_id ) {
 	elseif ( $newid && $newid != $oldid )
 		update_post_meta( $post_id, 'person_wiki', $newid );
 	elseif ( '' == $newid && $oldid )
-		delete_post_meta( $post_id, 'person_wiki', $oldid );	
-	       
+		delete_post_meta( $post_id, 'person_wiki', $oldid );
+
 
 	if( isset( $_POST[ 'person_twitter' ] ) ) {
 	    update_post_meta( $post_id, 'person_twitter',  sanitize_text_field($_POST[ 'person_twitter' ]) );
@@ -410,7 +410,7 @@ function piratenkleider_person_metabox_updated_messages( $messages ) {
 		1 => __('Business card updated.', 'piratenkleider'),
 		2 => __('Business card updated.', 'piratenkleider'),
 		3 => __('Business card removed.', 'piratenkleider'),
-		6 => __('Business card publiced.', 'piratenkleider'),
+		6 => __('Business card published.', 'piratenkleider'),
 		7 => __('Business card saved.', 'piratenkleider'),
 			);
 	return $messages;
@@ -423,13 +423,13 @@ add_filter( 'post_updated_messages', 'piratenkleider_person_metabox_updated_mess
 
 function piratenkleider_display_person ($post_id = 0, $format = 'full', $profillink = 1) {
     global $options;
-    
+
 
     $person_shortdesc = get_post_meta( $post_id, 'person_shortdesc', true );
     $person_text = apply_filters('the_content', get_post_field('post_content', $post_id));
-    
+
     $person_link = get_permalink( $post_id);
-    
+
     $person_last_name = get_post_meta( $post_id, 'person_last_name', true );
     $person_first_name = get_post_meta( $post_id, 'person_first_name', true );
     $person_academic = get_post_meta( $post_id, 'person_academic', true );
@@ -441,22 +441,22 @@ function piratenkleider_display_person ($post_id = 0, $format = 'full', $profill
     $person_url = get_post_meta( $post_id, 'person_url', true );
     $person_email = get_post_meta( $post_id, 'person_email', true );
     $person_pgp_fingerprint = get_post_meta( $post_id, 'person_pgp_fingerprint', true );
-    
-    
+
+
     $person_facebook = get_post_meta( $post_id, 'person_facebook', true );
     $person_twitter = get_post_meta( $post_id, 'person_twitter', true );
     $person_wiki = get_post_meta( $post_id, 'person_wiki', true );
     $person_google = get_post_meta( $post_id, 'person_google', true );
     $person_friendica = get_post_meta( $post_id, 'person_friendica', true );
     $person_instagram = get_post_meta( $post_id, 'person_instagram', true );
-    
+
     $person_newsfeed = get_post_meta( $post_id, 'person_newsfeed', true );
-    
-    
+
+
     $person_imgid = get_post_meta( $post_id, 'person_bildid', true );
     $person_image = get_post_meta( $post_id, 'person_bild', true );
     $bildfullwidth =  $bildsmallwidth = $personenbildfull = $personenbildsmall = $personenbildsidebar = '';
-    
+
     if ((isset($person_imgid) && ($person_imgid>0)) || (isset($person_image) && (strlen($person_image)))) {
 	$alttext = $fullname;
 	$coprightcap = '';
@@ -466,21 +466,21 @@ function piratenkleider_display_person ($post_id = 0, $format = 'full', $profill
 	   $image_attributessidebar = wp_get_attachment_image_src( $person_imgid, $options['sidebar-thumbnail_name'] );
 
 	   if (isset($image_attributes["credits"]) && (strlen($image_attributes["credits"])>1)) {
-	       $alttext .= "\n".' ('.$image_attributes["credits"].')';  
-	       $coprightcap .= '('.$image_attributes["credits"].')';  
-	   } 
+	       $alttext .= "\n".' ('.$image_attributes["credits"].')';
+	       $coprightcap .= '('.$image_attributes["credits"].')';
+	   }
 	   if (is_array($image_attributes)) {
 	      $personenbildfull = '<img itemprop="image" src="'.$image_attributes[0].'" width="'.$image_attributes[1].'" height="'.$image_attributes[2].'" alt="'.$alttext.'" class="size-full">';
 	      $personenbildsmall = '<img itemprop="image" src="'.$image_attributessmall[0].'" width="'.$image_attributessmall[1].'" height="'.$image_attributessmall[2].'" alt="'.$alttext.'" class="size-full">';
 	      $personenbildsidebar = '<img src="'.$image_attributessidebar[0].'" width="'.$image_attributessidebar[1].'" height="'.$image_attributessidebar[2].'" alt="'.$alttext.'">';
 	    }
-        
-	} elseif (isset($person_image)) {
-	    $personenbildfull = '<img itemprop="image" src="'.$person_image.'" alt="'.$alttext.'" class="size-full" height="'.$options['person-thumbnail_height'].'" style="width: auto;">'; 
-	    $personenbildsmall = '<img itemprop="image" src="'.$person_image.'" alt="'.$alttext.'" class="size-full" height="150" style="width: auto;">'; 
-	    $personenbildsidebar = '<img src="'.$person_image.'" alt="'.$alttext.'" width="'.$options['sidebar-thumbnail_width'].'" style="height: auto;">'; 
 
-	}          
+	} elseif (isset($person_image)) {
+	    $personenbildfull = '<img itemprop="image" src="'.$person_image.'" alt="'.$alttext.'" class="size-full" height="'.$options['person-thumbnail_height'].'" style="width: auto;">';
+	    $personenbildsmall = '<img itemprop="image" src="'.$person_image.'" alt="'.$alttext.'" class="size-full" height="150" style="width: auto;">';
+	    $personenbildsidebar = '<img src="'.$person_image.'" alt="'.$alttext.'" width="'.$options['sidebar-thumbnail_width'].'" style="height: auto;">';
+
+	}
 
 	$bildfullwidth = '<div style="width: 210px" class="wp-caption alignright">';
 	$bildfullwidth .= $personenbildfull;
@@ -489,8 +489,8 @@ function piratenkleider_display_person ($post_id = 0, $format = 'full', $profill
 		$bildfullwidth .= '<br>('.$coprightcap.')';
 	    }
 	$bildfullwidth .= '</p></div>';
-	
-	
+
+
 	$bildsmallwidth = '<div style="width: 160px" class="wp-caption alignleft">';
 	$bildsmallwidth .= $personenbildsmall;
 	$bildsmallwidth .= '<p class="wp-caption-text">'.$fullname;
@@ -498,34 +498,34 @@ function piratenkleider_display_person ($post_id = 0, $format = 'full', $profill
 		$bildsmallwidth .= '<br>('.$coprightcap.')';
 	    }
 	$bildsmallwidth .= '</p></div>';
-	
+
     }
-	    
-		   
+
+
     $out = '';
 
 	$kontaktdata = '';
-	if (isset($person_url) || isset($person_email) 
+	if (isset($person_url) || isset($person_email)
 		|| isset($person_facebook) || isset($person_twitter)
 		|| isset($person_wiki) || isset($person_google)) {
 	    $kontaktdata .= '<h3 class="contact">'.__('Contact','piratenkleider').'</h3>';
 	    $kontaktdata .= "<ul class=\"contact\">\n";
 	    if (isset($person_email) && strlen($person_email)>1) {
-		$kontaktdata .= "<li class=\"email\"><span>E-Mail: </span><a itemprop=\"email\" href=\"mailto:".$person_email."\">".$person_email."</a>";                  
+		$kontaktdata .= "<li class=\"email\"><span>E-Mail: </span><a itemprop=\"email\" href=\"mailto:".$person_email."\">".$person_email."</a>";
                 $kontaktdata .= "</li>\n";
 	    }
             if (isset($person_pgp_fingerprint) && strlen($person_pgp_fingerprint)>1) {
                 $kontaktdata .= "<li class=\"pgp\"><span>PGP Fingerprint: </span><code>".$person_pgp_fingerprint."</code></li>";
-            }  
+            }
 	    if (isset($person_url) && strlen($person_url)>1) {
 		$kontaktdata .= "<li class=\"website\"><span>Web: </span><a class=\"extern\" itemprop=\"url\" href=\"".$person_url."\">".piratenkleider_display_url($person_url)."</a></li>\n";
 	    }
-	    if (isset($person_twitter) && strlen($person_twitter)>1) {		
+	    if (isset($person_twitter) && strlen($person_twitter)>1) {
 		if (filter_var($person_twitter, FILTER_VALIDATE_URL)) {
-		    $url = $person_twitter; 
+		    $url = $person_twitter;
 		} else {
-		    $url = 'https://twitter.com/'.$person_twitter; 
-		}		
+		    $url = 'https://twitter.com/'.$person_twitter;
+		}
 		$kontaktdata .= "<li class=\"twitter\"><span>Twitter: </span><a href=\"".$url."\">".piratenkleider_display_url($url)."</a></li>\n";
 	    }
 	     if (isset($person_facebook) && strlen($person_facebook)>1) {
@@ -533,39 +533,39 @@ function piratenkleider_display_person ($post_id = 0, $format = 'full', $profill
 	    }
 	    if (isset($person_google) && strlen($person_google)>1) {
 		$kontaktdata .= "<li class=\"google\"><span>Google: </span><a href=\"".$person_google."\">".piratenkleider_display_url($person_google)."</a></li>\n";
-	    } 
+	    }
              if (isset($person_friendica) && strlen($person_friendica)>1) {
 		$kontaktdata .= "<li class=\"friendica\"><span>Friendica: </span><a href=\"".$person_friendica."\">".piratenkleider_display_url($person_friendica)."</a></li>\n";
-	    } 
+	    }
              if (isset($person_instagram) && strlen($person_instagram)>1) {
 		$kontaktdata .= "<li class=\"instagram\"><span>Instagram: </span><a href=\"".$person_instagram."\">".piratenkleider_display_url($person_instagram)."</a></li>\n";
-	    } 
-            
-            
+	    }
+
+
 	    if (isset($person_wiki) && strlen($person_wiki)>1) {
 		if (filter_var($person_wiki, FILTER_VALIDATE_URL)) {
-		    $url = $person_wiki; 
+		    $url = $person_wiki;
 		} else {
-		    $url = $options['url-wiki'].'/User:'.$person_wiki; 
+		    $url = $options['url-wiki'].'/User:'.$person_wiki;
 		}
 		$wikiclass = 'piratewiki';
 		if (preg_match("/wikipedia\.org/i",$url)) {
 		    $wikiclass = 'wiki';
 		}
 		$kontaktdata .= "<li class=\"".$wikiclass."\"><span>Wiki: </span><a href=\"".$url."\">".piratenkleider_display_url($url)."</a></li>\n";
-	    } 
+	    }
              if (isset($person_newsfeed) && strlen($person_newsfeed)>1) {
 		$kontaktdata .= "<li class=\"feed\"><span>Feed: </span><a href=\"".$person_newsfeed."\">".piratenkleider_display_url($person_newsfeed)."</a></li>\n";
-	    } 
+	    }
 	    $kontaktdata .= "</ul>\n";
-	   
+
 	}
-	
+
 	if ($format== 'full') {
 	    $out .= $bildfullwidth."\n";
 	    $out .= "<div class=\"textinfo\">\n";
 	    $out .= '<h3 class="about">'.__('About','piratenkleider').' ';
-	    if ($profillink==1) $out .= '<a href="'.$person_link.'">';	   
+	    if ($profillink==1) $out .= '<a href="'.$person_link.'">';
 	    $out .= '<span itemprop="name">' . $fullname . '</span>';
 	    if ($profillink==1) $out .= '</a>';
 	    $out .= '</h3>';
@@ -573,7 +573,7 @@ function piratenkleider_display_person ($post_id = 0, $format = 'full', $profill
 	    $out .= $kontaktdata;
 	    $out .= $person_text;
 	    $out .= "</div>\n";
-            
+
            if ($options['vcard-showfeed']==1 && isset($person_newsfeed) && strlen($person_newsfeed)>1) {
                 if(function_exists('fetch_feed')) {
                     include_once(ABSPATH.WPINC.'/feed.php');
@@ -587,46 +587,46 @@ function piratenkleider_display_person ($post_id = 0, $format = 'full', $profill
                      $out .= '<div class="personfeed">';
                      $out .= "<h3>".__('Last posts', 'piratenkleider')."</h3>\n";
                      $out .= "<ul>";
-                        foreach ($items as $item) {     
+                        foreach ($items as $item) {
                             $out .= '<li><a href="'.$item->get_permalink().'">';
                             $out .= $item->get_title();
                             $out .= '</a>';
                             $out .= ' ('.$item->get_date('j. F Y').')';
                             $out .= '</li>';
-                        }              
+                        }
                      $out .= "</ul>";
-                     $out .= "</div>\n"; 
-                }     
+                     $out .= "</div>\n";
+                }
             }
             if ($options['vcard-showlocalentries']==1) {
                 $searchterm = $fullname;
                 $query_args = array( 's' => $searchterm );
                 $personposts = new WP_Query( $query_args );
-                if ($personposts->have_posts() ) { 
-                    $ppout = $ppoutput = '';  
+                if ($personposts->have_posts() ) {
+                    $ppout = $ppoutput = '';
                     while ($personposts->have_posts()) : $personposts->the_post();
-                        $ppout = piratenkleider_post_teaser(1,1,1,200, 1,1,4);        
+                        $ppout = piratenkleider_post_teaser(1,1,1,200, 1,1,4);
                          if (isset($ppout)) {
                             $ppoutput .= $ppout;
                          }
                      endwhile;
-                }     
+                }
                 wp_reset_query();
                 if (isset($ppoutput)) {
                     $out .= '<div class="businesscard-entries">';
                     $out .=  "<h3>".__('Last entries from this site about', 'piratenkleider')." $fullname</h3>\n";
                     $out .= $ppoutput;
-                    $out .= "</div>\n"; 
+                    $out .= "</div>\n";
                 }
             }
-            
-            
+
+
 	} elseif ($format== 'small') {
              $out .= '<div itemscope itemtype="http://schema.org/Person">';
 	    $out .=  $bildsmallwidth;
 	    $out .= "<div class=\"textinfo\">\n";
 	    $out .= '<h3 class="about">';
-	    if ($profillink==1) $out .= '<a itemprop="url" href="'.$person_link.'">';	   
+	    if ($profillink==1) $out .= '<a itemprop="url" href="'.$person_link.'">';
 	    $out .= $fullname;
 	    if ($profillink==1) $out .= '</a>';
 	    $out .= '</h3>';
@@ -635,13 +635,13 @@ function piratenkleider_display_person ($post_id = 0, $format = 'full', $profill
 	    $out .= "</div>\n";
              $out .= "</div>\n";
 	} elseif ($format== 'sitebar') {
-	     $out .= '<section id="steckbrief" itemscope itemtype="http://schema.org/Person">';   
-	     if ($profillink==1) $out .= '<a itemprop="url" href="'.$person_link.'">';	   
+	     $out .= '<section id="steckbrief" itemscope itemtype="http://schema.org/Person">';
+	     if ($profillink==1) $out .= '<a itemprop="url" href="'.$person_link.'">';
              $out .=  $personenbildsidebar;
               if ($profillink==1) $out .= '</a>';
 	     $out .= '<div class="text">';
-	     $out .= '<h3 itemprop="name">';     
-	     $out .= $fullname;          
+	     $out .= '<h3 itemprop="name">';
+	     $out .= $fullname;
 	     $out .= '</h3>';
 	     $out .= $kontaktdata;
 	     $out .= '<p>'.$person_shortdesc."</p>\n";
@@ -655,14 +655,14 @@ function piratenkleider_display_person ($post_id = 0, $format = 'full', $profill
 	     $out .= "</td>";
 	     $out .= "<td>";
 	     $out .= '<h3 class="about" itemprop="name">';
-	     if ($profillink==1) $out .= '<a itemprop="url" href="'.$person_link.'">';	   
+	     if ($profillink==1) $out .= '<a itemprop="url" href="'.$person_link.'">';
 	    $out .= $fullname;
 	    if ($profillink==1) $out .= '</a>';
 	     $out .= '</h3>';
 	     $out .= $kontaktdata;
 	     $out .= '<p>'.$person_shortdesc."</p>\n";
 	     $out .= "</td>";
-	     $out .= "</tr>";     
+	     $out .= "</tr>";
 	} elseif ($format== 'bigtable') {
 	     $out .= '<tr itemscope itemtype="http://schema.org/Person">';
 	     $out .= "<td>";
@@ -670,13 +670,13 @@ function piratenkleider_display_person ($post_id = 0, $format = 'full', $profill
 	     $out .= "</td>";
 	     $out .= "<td>";
 	     $out .= '<h3 class="about" itemprop="name">';
-	    if ($profillink==1) $out .= '<a itemprop="url" href="'.$person_link.'">';	   
+	    if ($profillink==1) $out .= '<a itemprop="url" href="'.$person_link.'">';
 	    $out .= $fullname;
 	    if ($profillink==1) $out .= '</a>';
 	     $out .= '</h3>';
 	     $out .= $kontaktdata;
 	     $out .= '<p>'.$person_shortdesc."</p>\n";
-      	     $out .= $person_text;	    
+      	     $out .= $person_text;
 	     $out .= "</td>";
 	     $out .= "</tr>";
 	} else {
@@ -684,7 +684,7 @@ function piratenkleider_display_person ($post_id = 0, $format = 'full', $profill
 	    $out .=  $bildsmallwidth;
 	    $out .= "<div class=\"textinfo\">\n";
 	    $out .= '<h3 class="about" itemprop="name">';
-	    if ($profillink==1) $out .= '<a itemprop="url" href="'.$person_link.'">';	   
+	    if ($profillink==1) $out .= '<a itemprop="url" href="'.$person_link.'">';
 	    $out .= $fullname;
 	    if ($profillink==1) $out .= '</a>';
 	    $out .= '</h3>';
@@ -723,11 +723,11 @@ function piratenkleider_person_shortcode( $atts ) {
 	$order =   strtolower(sanitize_text_field($atts['order']));
 	$offset = intval($atts['offset']);
 
-	
+
 	if ($order != 'desc') {
 		$order='ASC';
 	} else {
-	    $order='DESC';  
+	    $order='DESC';
 	}
 	$format = sanitize_text_field($atts['format']);
 	$showautor = sanitize_text_field($atts['showautor']);
@@ -737,7 +737,7 @@ function piratenkleider_person_shortcode( $atts ) {
 			'p' => $atts['id']
 		);
 	    $single = 1;
-	} elseif ((isset($name)) && ( strlen(trim($name))>0)) {    
+	} elseif ((isset($name)) && ( strlen(trim($name))>0)) {
 	      $args = array(
 			'post_type' => 'person',
 			'meta_query' => array(
@@ -765,11 +765,11 @@ function piratenkleider_person_shortcode( $atts ) {
 			'posts_per_page' => $num,
 			'offset'    => $offset
 		);
-        } elseif ((isset($listorder)) && ( strlen(trim($listorder))>0)) {   
+        } elseif ((isset($listorder)) && ( strlen(trim($listorder))>0)) {
             $post_list = explode(",",$listorder);
             $list = array();
             $i=0;
-            foreach( $post_list as $post_id ) {               
+            foreach( $post_list as $post_id ) {
                 if (intval(trim($post_id))) {
                     $list[$i] = intval(trim($post_id));
                     $i= $i +1;
@@ -779,7 +779,7 @@ function piratenkleider_person_shortcode( $atts ) {
 			'post_type' => 'person',
 			'post__in'      => $list,
 			'order' => $order,
-			'orderby' => 'post__in',    
+			'orderby' => 'post__in',
                         'posts_per_page' => $i,
 		);
 	} else {
@@ -790,15 +790,15 @@ function piratenkleider_person_shortcode( $atts ) {
 		    'orderby' => 'meta_value',
 		    'posts_per_page' => $num,
 		    'offset'    => $offset
-			
+
 	    );
 	}
 	 $out = '';
 	$person = new WP_Query( $args );
 		if( $person->have_posts() ) {
-		   
-		    if ((isset($format) && ($format=='table') && ($single==0)) 
-	  	       || (isset($format) && ($format=='bigtable') && ($single==0))) 
+
+		    if ((isset($format) && ($format=='table') && ($single==0))
+	  	       || (isset($format) && ($format=='bigtable') && ($single==0)))
 			{
 			 $out .= ' <table class="person">';
 		    } else {
@@ -806,7 +806,7 @@ function piratenkleider_person_shortcode( $atts ) {
 		    }
 
 		    while ($person->have_posts() ) {
-			    $person->the_post();	   
+			    $person->the_post();
 			    $post_id = $person->post->ID;
 			    if (isset($id) && isset($format) &&($format=='short')) {
 				    $out .= piratenkleider_display_person($post_id, 'short');
@@ -818,7 +818,7 @@ function piratenkleider_person_shortcode( $atts ) {
 				     $out .= piratenkleider_display_person($post_id, 'full');
 			    }
 			}
-			if ((isset($format) && ($format=='table') && ($single==0)) 
+			if ((isset($format) && ($format=='table') && ($single==0))
 			     || (isset($format) && ($format=='bigtable') && ($single==0))) {
 				$out .= '</table>';
 			} else {
@@ -848,7 +848,7 @@ add_action( 'load-post-new.php', 'piratenkleider_post_metabox_person_setup' );
 /* Meta box setup function. */
 function piratenkleider_post_metabox_person_setup() {
 	/* Add meta boxes on the 'add_meta_boxes' hook. */
-	add_action( 'add_meta_boxes', 'piratenkleider_add_post_metabox_person' );	
+	add_action( 'add_meta_boxes', 'piratenkleider_add_post_metabox_person' );
 		/* Save post meta on the 'save_post' hook. */
 	add_action( 'save_post', 'piratenkleider_save_post_class_meta', 10, 2 );
 }
@@ -865,10 +865,10 @@ function piratenkleider_add_post_metabox_person() {
 	);
 }
 /* Display the post meta box. */
-function piratenkleider_post_class_metabox_person( $object, $box ) { 
+function piratenkleider_post_class_metabox_person( $object, $box ) {
 	global $defaultoptions;
-	
-	wp_nonce_field( basename( __FILE__ ), 'piratenkleider_post_class_nonce' ); 
+
+	wp_nonce_field( basename( __FILE__ ), 'piratenkleider_post_class_nonce' );
 	?>
 	<p>
 		<label for="piratenkleider-personalcard-id"><?php _e( "Select someone you want to show with a business card along the article.", 'piratenkleider' ); ?></label>
@@ -876,7 +876,7 @@ function piratenkleider_post_class_metabox_person( $object, $box ) {
 		<select name="piratenkleider-personalcard-id" id="piratenkleider-personalcard-id">
 		    <option value=""><?php _e( "Do not display any business card", 'piratenkleider' ); ?></option>
 		    <?php
-		    
+
 			$notice = '';
 			 $oldid = esc_attr( get_post_meta( $object->ID, 'piratenkleider-personalcard-id', true ) );
 		    	    $args = array(
@@ -887,13 +887,13 @@ function piratenkleider_post_class_metabox_person( $object, $box ) {
 					'posts_per_page' => 30,
 
 				);
-	    
+
 			    $out = '';
 			    $personlist = new WP_Query( $args );
-			    if( $personlist->have_posts() ) {		
-				
+			    if( $personlist->have_posts() ) {
+
 				if ($personlist->post_count > $defaultoptions['vcard-maxnum-selectlist']) {
-				    $catsortlist = array();	    
+				    $catsortlist = array();
 				    while ($personlist->have_posts() ) {
 					$thisissel = 0;
 					$catout = '';
@@ -904,15 +904,15 @@ function piratenkleider_post_class_metabox_person( $object, $box ) {
 					$fullname = $person_first_name.' '.$person_last_name;
 					$firstsel = 0;
 					$catout .= '<option value="'.$listid.'"';
-					
+
 					if ($oldid && $oldid==$listid) {
 					    $catout .= ' selected="selected"';
 					    $thisissel = 1;
 					}
 					$catout .= '>'.$fullname.'</option>'."\n";
 					$catout2 =  '<option value="'.$listid.'">'.$fullname.'</option>'."\n";
-					
-					
+
+
 					$post_categories = wp_get_object_terms( $listid, 'person_category' );
 					if (empty($post_categories) ) {
 					    $catsortlist['_default'][] = $catout;
@@ -928,7 +928,7 @@ function piratenkleider_post_class_metabox_person( $object, $box ) {
 					    }
 					}
 				    }
-				   
+
 				    foreach($catsortlist as $name => $val){
 					if ($name == '_default') {
 					    foreach($val as $entry){
@@ -944,7 +944,7 @@ function piratenkleider_post_class_metabox_person( $object, $box ) {
 				    }
 				} else {
 				    while ($personlist->have_posts() ) {
-					$personlist->the_post();	   
+					$personlist->the_post();
 					$listid = $personlist->post->ID;
 					$person_last_name = get_post_meta( $listid, 'person_last_name', true );
 					$person_first_name = get_post_meta( $listid, 'person_first_name', true );
@@ -962,9 +962,9 @@ function piratenkleider_post_class_metabox_person( $object, $box ) {
 			    wp_reset_query();
 			    if (isset($out)) {
 				echo $out;
-			    }		    
+			    }
 			    ?>
-		</select>	
+		</select>
 		<?php
 		   if (isset($notice)) {
 		       echo '<span class="info">'.$notice."</span>\n";
@@ -973,29 +973,29 @@ function piratenkleider_post_class_metabox_person( $object, $box ) {
 	</p>
 	<div class="visiting-card-manual">
 	<p>
-	    <?php _e( "Alternativly define manually a short text and an image:", 'piratenkleider' ); ?>
+	    <?php _e( "Alternatively define manually a short text and an image:", 'piratenkleider' ); ?>
 	</p>
-	
+
 	<p>
 		<label for="piratenkleider-sidebar-text"><?php _e( "Short text for sidebar", 'piratenkleider' ); ?></label>
 		<br />
-		<?php 
+		<?php
 		    // Downwards comtability:  Version 2 used "text" as meta key, Version 3 "piratenkleider-sidebar-text"
 		    $textfield = esc_attr( get_post_meta( $object->ID, 'piratenkleider-sidebar-text', true ) );
 		    if (empty($textfield)) {
-			$textfield = esc_attr( get_post_meta( $object->ID, 'text', true ) );			
+			$textfield = esc_attr( get_post_meta( $object->ID, 'text', true ) );
 		    }
 		  ?>
-		
+
 		<input class="widefat" type="text" name="piratenkleider-sidebar-text" id="piratenkleider-sidebar-text" value="<?php echo $textfield; ?>" size="30" />
 	</p>
-	
+
 	<p>
 	    <label for="person_bild"><?php _e( "Picture", 'piratenkleider' ); ?>:</label>
 	    <br />
-	     	    
+
 		<?php
-		
+
 		 $person_bildid = get_post_meta( $object->ID, 'piratenkleider-sidebar-image_id', true );
 		 $person_bild = get_post_meta( $object->ID, 'piratenkleider-sidebar-image_url', true );
 		 if ((empty($person_bildid)) || (empty($person_bild))) {
@@ -1007,26 +1007,26 @@ function piratenkleider_post_class_metabox_person( $object, $box ) {
 			echo '<img id="person_bild-show" src="'.$image_attributes[0].'" style="max-width: 200px; height: auto;">';
 			$person_bild = $image_attributes[0];
 		     }
-		     
+
 		 } elseif (filter_var($person_bild, FILTER_VALIDATE_URL)) {
 			echo '<img id="person_bild-show" src="'.$person_bild.'" alt="" style="max-width: 200px; height: auto;">';
 		 } else {
-			echo '<img id="person_bild-show" src="'.$defaultoptions['src-person_bild_default'].'" alt="" >';			
+			echo '<img id="person_bild-show" src="'.$defaultoptions['src-person_bild_default'].'" alt="" >';
 		 }
-		 echo '<br /><span class="custom_default_image" style="display:none">'.$defaultoptions['src-person_bild_default'].'</span>';  
+		 echo '<br /><span class="custom_default_image" style="display:none">'.$defaultoptions['src-person_bild_default'].'</span>';
 		?>
-	     <input type="text" name="person_bild" size="50" id="person_bild" 
+	     <input type="text" name="person_bild" size="50" id="person_bild"
 		    value="<?php echo $person_bild; ?>" />
-	     <input type="hidden" name="person_bildid" id="person_bildid" 
-		    value="<?php echo $person_bildid; ?>" />	    
-	     
-	     
+	     <input type="hidden" name="person_bildid" id="person_bildid"
+		    value="<?php echo $person_bildid; ?>" />
+
+
 	     <input type="button" id="person_bild-button" class="button" value="<?php _e( "Select or upload image", 'piratenkleider' ); ?>" />
-	    <small> &nbsp;  <a href="#" class="custom_clear_image_button"><?php _e( "Remove picture", 'piratenkleider' ); ?></a></small> 
+	    <small> &nbsp;  <a href="#" class="custom_clear_image_button"><?php _e( "Remove picture", 'piratenkleider' ); ?></a></small>
 	</p>
 	</div>
 
-	    
+
 <?php }
 
 /* Save the meta box's post metadata. */
@@ -1052,7 +1052,7 @@ function piratenkleider_save_post_class_meta( $post_id, $post ) {
 		update_post_meta( $post_id, 'piratenkleider-personalcard-id', $newid );
 	elseif ( '' == $newid && $oldid )
 		delete_post_meta( $post_id, 'piratenkleider-personalcard-id', $oldid );
-	
+
 
 	$newid = ( isset( $_POST['person_bildid'] ) ? sanitize_key( $_POST['person_bildid'] ) : '' );
 	$oldid = get_post_meta( $post_id, 'piratenkleider-sidebar-image_id', true );
@@ -1064,29 +1064,29 @@ function piratenkleider_save_post_class_meta( $post_id, $post ) {
 	elseif ( $newid && $newid != $oldid )
 		update_post_meta( $post_id, 'piratenkleider-sidebar-image_id', $newid );
 	elseif ( '' == $newid && $oldid )
-		delete_post_meta( $post_id, 'piratenkleider-sidebar-image_id', $oldid );	
-	
+		delete_post_meta( $post_id, 'piratenkleider-sidebar-image_id', $oldid );
+
 	// Remove old values from version 2
 	$olderid = get_post_meta( $post_id, 'image_url', true );
 	if (isset($olderid)) {
-	    delete_post_meta( $post_id, 'image_url', $olderid );	
+	    delete_post_meta( $post_id, 'image_url', $olderid );
 	}
-	
+
 	if ((isset( $_POST['person_bild'] ) && (filter_var($_POST['person_bild'], FILTER_VALIDATE_URL)))) {
 	    $bildurl = $_POST['person_bild'];
 	} else {
 	    $bildurl = '';
-	}	
+	}
 	$oldurl = get_post_meta( $post_id, 'piratenkleider-sidebar-image_url', true );
-	
+
 	if ( $bildurl && '' == $oldurl )
 		add_post_meta( $post_id, 'piratenkleider-sidebar-image_url', $bildurl, true );
 	elseif ( $bildurl && $bildurl != $oldurl )
 		update_post_meta( $post_id, 'piratenkleider-sidebar-image_url', $bildurl );
 	elseif ( '' == $bildurl && $oldurl )
-		delete_post_meta( $post_id, 'piratenkleider-sidebar-image_url', $oldurl );	
-	
-	
+		delete_post_meta( $post_id, 'piratenkleider-sidebar-image_url', $oldurl );
+
+
 	$new_text = ( isset( $_POST['piratenkleider-sidebar-text'] ) ? sanitize_text_field( $_POST['piratenkleider-sidebar-text'] ) : '' );
 	$oldtext = get_post_meta( $post_id, 'piratenkleider-sidebar-text', true );
 	if (empty($oldtext)) {
@@ -1097,13 +1097,13 @@ function piratenkleider_save_post_class_meta( $post_id, $post ) {
 	elseif ( $new_text && $new_text != $oldtext )
 		update_post_meta( $post_id, 'piratenkleider-sidebar-text', $new_text );
 	elseif ( '' == $new_text && $oldtext )
-		delete_post_meta( $post_id, 'piratenkleider-sidebar-text', $oldtext );	
-	
+		delete_post_meta( $post_id, 'piratenkleider-sidebar-text', $oldtext );
+
 	// Remove old values from version 2
 	$oldertext = get_post_meta( $post_id, 'text', true );
 	if (isset($oldertext)) {
-	    delete_post_meta( $post_id, 'text', $oldertext );	
-	}		
+	    delete_post_meta( $post_id, 'text', $oldertext );
+	}
 }
 
 
@@ -1111,21 +1111,21 @@ if ( ! function_exists( 'get_piratenkleider_steckbrief' ) ) :
     /*
      * Anzeige der Steckbrief-Info zu einem Post
      */
-    
+
 function get_piratenkleider_steckbrief(){
   global $post;
   global $options;
-  
-  
+
+
   $personid = esc_attr( get_post_meta( $post->ID, 'piratenkleider-personalcard-id', true ) );
-  if ((isset($personid)) && ($personid>0)) {      
-      return piratenkleider_display_person($personid,'sitebar'); 
-  }  
-  
+  if ((isset($personid)) && ($personid>0)) {
+      return piratenkleider_display_person($personid,'sitebar');
+  }
+
   $text = esc_attr( get_post_meta( $post->ID, 'piratenkleider-sidebar-text', true ) );
    if (empty($text)) {
        /* Downwards compatibility */
-	$text = esc_attr( get_post_meta( $post->ID, 'text', true ) );			
+	$text = esc_attr( get_post_meta( $post->ID, 'text', true ) );
     }
    $image_url = get_post_meta( $post->ID, 'piratenkleider-sidebar-image_url', true );
    $image_id = 0;
@@ -1135,37 +1135,37 @@ function get_piratenkleider_steckbrief(){
     } else {
 	$image_id = get_post_meta( $post->ID, 'piratenkleider-sidebar-image_id', true );
     }
-  
-    $out = '';	
-    if  (  ( isset($text) 
+
+    $out = '';
+    if  (  ( isset($text)
 	    && isset($image_url)
 	    && (strlen(trim($text))>0))
 	|| (
-	    (isset($text) 
-	    && (strlen(trim($text))>0)) 
+	    (isset($text)
+	    && (strlen(trim($text))>0))
 	    && (has_post_thumbnail()))
-	    ) {   
-	$out .= '<div id="steckbrief">';   
+	    ) {
+	$out .= '<div id="steckbrief">';
 	if (isset($image_url) ) {
 	    if ($image_id >0) {
-		$out .= wp_get_attachment_image( $image_id, array($options['sidebar-steckbrief-maxwidth'],$options['sidebar-steckbrief-maxheight']) );		
+		$out .= wp_get_attachment_image( $image_id, array($options['sidebar-steckbrief-maxwidth'],$options['sidebar-steckbrief-maxheight']) );
 	    } else {
 		$out .= wp_get_attachment_image( $image_url, array($options['sidebar-steckbrief-maxwidth'],$options['sidebar-steckbrief-maxheight']) );
 	    }
-	} 
-	$out .= "\n";  
+	}
+	$out .= "\n";
 	$out .= ' <div class="text">';
-	$out .=  do_shortcode($text); 
+	$out .=  do_shortcode($text);
 	$out .= "</div>\n";
 	$out .= "</div>\n";
-		
-    }  
+
+    }
    return $out;
-  
+
 }
 endif;
 
 function piratenkleider_display_url($url = '') {
-    $outurl = preg_replace('/^(https?:\/\/)/','',$url); 
+    $outurl = preg_replace('/^(https?:\/\/)/','',$url);
     return $outurl;
 }

@@ -1,17 +1,21 @@
 /*
 Theme Name: Piratenkleider
 Theme URI: http://www.piratenkleider.de
-GitHub Theme URI: https://github.com/xwolfde/Piratenkleider
-Description: Theme for websites of the Pirate Party; It contains several sub-designs, color- and font-settings to adjust it to the corporate design of several countries worldwide.
-Author: xwolf
-Author URI: http://www.xwolf.de 
-Author E-Mail: info@piratenkleider.de
-Version: 3.4.8
+GitHub Theme URI: https://github.com/jonasbebe/Piratenkleider
+Original Author: Wolfgang Wiese (xwolf), http://www.xwolf.de
+Original Source: https://github.com/xwolfde/Piratenkleider
+Description: Fork of Piratenkleider by xwolf (v3.4.8), maintained for PHP 8+ and WordPress 7.x compatibility. Theme for websites of the Pirate Party; It contains several sub-designs, color- and font-settings to adjust it to the corporate design of several countries worldwide.
+Author: jonasbebe
+Author URI: http://www.jonas-bebe.de
+Version: 3.5.0
+Requires at least: 6.5
+Tested up to: 7.1
+Requires PHP: 8.0
 Tags: fluid-layout, custom-header, custom-menu, featured-image-header, featured-images, full-width-template, theme-options
-Piratenkleider is distributed under the terms of the GNU GPL
 License: GNU General Public License v2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: piratenkleider
+Domain Path: /languages
 */
 
 /* @import url(css/piratenkleider.css);  */
