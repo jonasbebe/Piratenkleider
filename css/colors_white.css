@@ -13,8 +13,8 @@ body, .header {
 }
 
 .content-aside,
-.content .row, 
-.teaser .row {    
+.content .row,
+.teaser .row {
     background: rgba(255,255,255,0.8);
 }
 .content-primary {
@@ -24,10 +24,10 @@ body, .header {
     background: rgba(255,255,255,0.5);
 }
 
-.teaserlinks ul li, 
+.teaserlinks ul li,
 .content-aside .newsletter {
     background: #ccc;
-    box-shadow:#000; 
+    box-shadow:#000;
 }
 
 .sticker ul li a .cicolor {
@@ -48,19 +48,19 @@ body, .header {
     color: white;
     background: none repeat scroll 0 0 #aaa;
   }
-  
+
 .content-aside table {
   background: #c96a00;
   background: rgba(0, 0, 0, 0.2);
 }
 .content-aside table td,
 .content-aside table th {
-    border-top: 1px solid #aaa; 
+    border-top: 1px solid #aaa;
 }
 .content-aside blockquote {
   background: #c96a00;
   background: rgba(0, 0, 0, 0.2);
- 
+
 }
 
 
@@ -71,18 +71,18 @@ body, .header {
 
 .content-aside ul.menu li a {
     background: white;
-    color: #2d7dc5;        
+    color: #2d7dc5;
 }
 .content-aside ul.menu li.active a,
 .content-aside ul.menu li a:hover,
 .content-aside ul.menu li a:focus {
         color: white;
-        background: #aaa; 
+        background: #aaa;
 }
 .slide .caption h3 a:hover,
  .content-aside .widget li:hover,
  .content-aside .widget li:focus,
- .content-aside .twitterwidget li:hover, 
+ .content-aside .twitterwidget li:hover,
  .content-aside .twitterwidget li:focus {
-     background: #aaa; 
- }  
+     background: #aaa;
+ }

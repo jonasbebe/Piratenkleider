@@ -1,4 +1,4 @@
-/* 
+/*
  * Backend CSS
  */
 
@@ -48,7 +48,7 @@
 }
 #custom-background-image {
 	height: 225px;
-	background-position: bottom left !important; 
+	background-position: bottom left !important;
 	background-repeat: repeat-x, no-repeat;
 }
 label.description {
@@ -59,7 +59,7 @@ p.submit {
 	padding-left: 20px;
 }
 .wrap div.updated {
-	margin-right: 300px;                    
+	margin-right: 300px;
 }
 #einstellungen {
 	margin-top: 20px;
@@ -72,11 +72,11 @@ p.submit {
 	background-color: #eeeeee;
 	-webkit-transition: all 0.1s ease-in-out;
 	-ms-transition: all 0.1s ease-in-out;
-	-o-transition: all 0.1s ease-in-out; 
+	-o-transition: all 0.1s ease-in-out;
 	transition: all 0.1s ease-in-out;
 }
 #einstellungen table th {
-	text-align: left;   
+	text-align: left;
 	min-width: 200px;
 }
 #einstellungen table td {
@@ -86,7 +86,7 @@ p.submit {
 	background-color: #f50;
 	color: white;
 }
-#einstellungen tr.mark-option:focus, 
+#einstellungen tr.mark-option:focus,
 #einstellungen tr.mark-option:hover {
 	background-color: #a62911;
 }
@@ -107,7 +107,7 @@ h2.nav-tab-wrapper, h3.nav-tab-wrapper {
 label.tile {
 	width: 320px;
 	height: auto;
-	float: left;    
+	float: left;
 	padding: 0 2px;
 	margin: 5px;
 	border: 3px solid transparent;
@@ -119,12 +119,12 @@ label.tile img {
 	margin: 0;
 	padding: 0;
 }
-label.checked, 
-label.tile:hover, 
+label.checked,
+label.tile:hover,
 label.tile:focus {
 	border-color: orange;
 	background: orange;
-} 
+}
 
 label.plakattile {
 	width: 160px;

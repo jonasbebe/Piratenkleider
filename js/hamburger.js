@@ -1,10 +1,10 @@
-/* 
+/*
  * Optional Hamburger Menu for small screen displays
  */
 
 
 
-jQuery(document).ready(function($) { 
+jQuery(document).ready(function($) {
     var lastsize= window.innerWidth;
     var cloneimg =0;
     if(window.innerWidth < 769) {
@@ -26,7 +26,7 @@ jQuery(document).ready(function($) {
 	}
 	if ((window.innerWidth <= 769) && (lastsize > 768)) {
 	    lastsize = window.innerWidth;
-	     
+
 	    $(".header").before('<div id="header-menu-icon"></div>');
 	    if (cloneimg==0) {
 	      $( ".branding h1 img" ).clone().appendTo( "#header-menu-icon" );
