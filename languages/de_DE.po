@@ -722,11 +722,6 @@ msgid "Wiki"
 msgstr "Wiki"
 
 # @ piratenkleider
-#: inc/constants.php:381
-msgid "BEO"
-msgstr "BEO"
-
-# @ piratenkleider
 #: inc/constants.php:386
 msgid "Forum"
 msgstr "Forum"
@@ -745,16 +740,6 @@ msgstr "Flaschenpost"
 #: inc/constants.php:401
 msgid "Donating"
 msgstr "Spenden"
-
-# @ piratenkleider
-#: inc/constants.php:406
-msgid "Shop"
-msgstr "Shop"
-
-# @ piratenkleider
-#: inc/constants.php:411
-msgid "Pirateninfo"
-msgstr "Pirateninfo"
 
 # @ piratenkleider
 #: inc/constants.php:424

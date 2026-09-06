@@ -140,11 +140,6 @@
 }
 
 /* Pirate Websites */
-.content-primary a[href *= "pirateninfo.de"]:before {
-	background-position: -22px 0;
-	width: 18px;
-}
-
 .content-primary a[href *= "lqfb.piratenpartei.de"]:before {
 	background-position: -142px 0;
 	width: 18px;
@@ -157,7 +152,7 @@
 	width: 16px;
 }
 
-.content-primary a[href *= "news.piratenpartei.de"]:before {
+.content-primary a[href *= "diskussion.piratenpartei.de"]:before {
 	background-position: -122px 0;
 	width: 18px;
 }
@@ -188,12 +183,13 @@
 	width: 18px;
 }
 
-.content-primary a[href *= "plus.google.com"]:before {
+.content-primary a[href *= "piratenpartei.social"]:before {
 	background: url('../images/socialmedia.png') no-repeat -40px -200px;
 	width: 18px;
 }
 
-.content-primary a[href *= "twitter.com"]:before {
+.content-primary a[href *= "twitter.com"]:before,
+.content-primary a[href *= "x.com"]:before {
 	background: url('../images/socialmedia.png') no-repeat -40px -328px;
 	width: 18px;
 }

@@ -2638,11 +2638,7 @@ margin-bottom: 10px;
 	margin-top: -160px;
 }
 
-.content-aside #steckbrief ul.contact li.gplus a:before {
-	margin-top: -192px;
-}
-
-.content-aside #steckbrief ul.contact li.google a:before {
+.content-aside #steckbrief ul.contact li.fediverse a:before {
 	margin-top: -192px;
 }
 
@@ -3289,7 +3285,7 @@ ul.socialmedia {
 	margin-top: -160px;
 }
 
-.socialmedia .icon_gplus:before {
+.socialmedia .icon_fediverse:before {
 	margin-top: -192px;
 }
 
@@ -3342,7 +3338,7 @@ ul.socialmedia {
 .socialmedia .icon_feed:hover,.socialmedia .icon_feed:focus,
 .socialmedia .icon_flattr:hover,.socialmedia .icon_flattr:focus,
 .socialmedia .icon_flickr:hover,.socialmedia .icon_flickr:focus,
-.socialmedia .icon_gplus:hover,.socialmedia .icon_gplus:focus,
+.socialmedia .icon_fediverse:hover,.socialmedia .icon_fediverse:focus,
 .socialmedia .icon_identica:hover,.socialmedia .icon_identica:focus,
 .socialmedia .icon_itunes:hover,.socialmedia .icon_itunes:focus,
 .socialmedia .icon_skype:hover,.socialmedia .icon_skype:focus,

@@ -205,11 +205,11 @@ $defaultoptions = array(
 
     'teaserlink3-title'             => __( 'Become a Pirat!', 'piratenkleider' ),
     'teaserlink3-untertitel'        => __( 'Subscribe to the pirate party', 'piratenkleider' ),
-    'teaserlink3-url'               => 'https://www.piratenpartei.de/mitmachen/mitglied-werden/',
+    'teaserlink3-url'               => 'https://piratenpartei.de/werde-pirat/',
     'teaserlink3-symbol'            => 'steuerrad',
 
     'stickerlink1-content'          => '<span class="gedreht">Become<br><span class="cicolor">Pirat!</span></span>',
-    'stickerlink1-url'              => 'https://www.piratenpartei.de/mitmachen/mitglied-werden/',
+    'stickerlink1-url'              => 'https://piratenpartei.de/werde-pirat/',
     'stickerlink2-content'          => '<span class="gedreht"><span class="cicolor">Support</span><br><span class="small">and help us</span> </span>',
     'stickerlink2-url'              => 'https://spenden.piratenpartei.de/',
     'stickerlink3-content'          => '',
@@ -289,13 +289,13 @@ $default_socialmedia_liste = array(
 	'active' => 1,
     ),
     'twitter' => array(
-	'name' => 'Twitter',
-	'content'  => 'https://twitter.com/piratenpartei',
+	'name' => 'X',
+	'content'  => 'https://x.com/piratenpartei',
 	'active' => 1,
     ),
-    'gplus' => array(
-	'name' => 'Google Plus',
-	'content'  => 'https://plus.google.com/+piratenpartei',
+    'fediverse' => array(
+	'name' => 'Fediverse',
+	'content'  => 'https://piratenpartei.social/profile/piratenpartei',
 	'active' => 1,
     ),
     'flattr' => array(
@@ -377,14 +377,9 @@ $default_toplink_liste = array(
 	'content'  => 'https://wiki.piratenpartei.de',
 	'active'    => 1,
     ),
-    'link2'  => array(
-	'name'	    => __('BEO', 'piratenkleider' ),
-	'content'  => 'https://beo.piratenpartei.de',
-	'active'    => 1,
-    ),
     'link3'  => array(
 	'name'	    => __('Forum', 'piratenkleider' ),
-	'content'  => 'https://news.piratenpartei.de',
+	'content'  => 'https://diskussion.piratenpartei.de',
 	'active'    => 1,
     ),
     'link4'  => array(
@@ -400,16 +395,6 @@ $default_toplink_liste = array(
     'link6'  => array(
 	'name'	    => __('Donating', 'piratenkleider' ),
 	'content'  => 'https://spenden.piratenpartei.de',
-	'active'    => 1,
-    ),
-    'link7'  => array(
-	'name'	    => __('Shop', 'piratenkleider' ),
-	'content'  => 'https://shop.piratenpartei.de',
-	'active'    => 0,
-    ),
-     'link8'  => array(
-	'name'	    => __('Pirateninfo', 'piratenkleider' ),
-	'content'  => 'http://www.pirateninfo.de',
 	'active'    => 1,
     ),
 );
