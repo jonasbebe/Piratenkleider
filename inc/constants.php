@@ -296,7 +296,7 @@ $default_socialmedia_liste = array(
     'fediverse' => array(
 	'name' => 'Fediverse',
 	'content'  => 'https://piratenpartei.social/profile/piratenpartei',
-	'active' => 1,
+	'active' => 0,
     ),
     'flattr' => array(
 	'name' => 'Flattr',
